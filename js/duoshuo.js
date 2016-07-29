@@ -1781,13 +1781,13 @@ t += "</div>", 1 == i.max_depth && i.show_context && s.parents.length) {
                  reset: function(e) {
                     function t(t, s) {
                         var i = 0 === e.indexOf("微博") ? "http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/" + s.replace("_org", "_thumb") : S.STATIC_URL + "/images/smilies/" + s;
-                        if (e.indexOf("泡泡") >= 0) {
-                            var subfix = "";
-                            if (window.devicePixelRatio != undefined && window.devicePixelRatio >= 1.49) {
-                                subfix = "@2x";
-                            }
-                            i = "https://caisiduo.xyz/img/泡泡/" + s + subfix + ".png";
-                        }
+                          if (e.indexOf("泡泡") >= 0) {
+                              var subfix = "";
+                              if (window.devicePixelRatio != undefined && window.devicePixelRatio >= 1.49) {
+                                  subfix = "@2x";
+                              }
+                              i = "https://caisiduo.xyz/img/泡泡/" + s + subfix + ".png";
+                          }
                         i = i.replace("http://", "//dn-inode.qbox.me/");
                         "WordPress" === e && (t = " " + t + " "), a += '<li><img src="' + i + '" title="' + _(t) + '" width=30 height=30 /></li>'
                     }
