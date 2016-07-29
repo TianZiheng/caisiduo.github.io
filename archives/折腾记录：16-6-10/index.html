@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>折腾记录：16/6/10 | 蔡锶铎博客</title>
+  <meta name="author" content="蔡锶铎">
+  
+  <meta name="description" content="某陷入代码黑洞的少年（￣▽￣）">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="折腾记录：16/6/10"/>
+  <meta property="og:site_name" content="蔡锶铎博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="atom.xml" title="蔡锶铎博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">蔡锶铎博客</a></h1>
+  <h2><a href="/">某陷入代码黑洞的少年（￣▽￣）</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-06-10T07:14:12.000Z"><a href="/archives/折腾记录：16-6-10/">2016-06-10</a></time>
+      
+      
+  
+    <h1 class="title">折腾记录：16/6/10</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>今天两次折腾的起因都来源于：<a href="https://qqdie.com/" title="Jrotty" target="_blank" rel="external">Jrotty</a></p>
+<a id="more"></a>
+<h2 id="折腾一："><a href="#折腾一：" class="headerlink" title="折腾一："></a>折腾一：</h2><blockquote>
+<p>文章底部上一篇and下一篇 <strong><em>title</em></strong> 属性</p>
+</blockquote>
+<p>失败次数：<strong>6</strong> 次<br>失败原因：不了解hexo函数<br>解决方法：百度一下你就知道<br>最终代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nav.pagination</span><br><span class="line">include title</span><br><span class="line">if article.prev</span><br><span class="line">  a#left-navigator(href=url_for(article.prev.path), title=(article.prev.title))</span><br><span class="line">= __(&apos;article.prev&apos;)</span><br><span class="line"> +comments_switch(article)</span><br><span class="line">if article.next</span><br><span class="line">  a#right-navigator(href=url_for(article.next.path), title=(article.next.title))</span><br><span class="line">= __(&apos;article.next&apos;)</span><br></pre></td></tr></table></figure>
+<p>折腾前：<img src="http://o8a5cj75f.bkt.clouddn.com/360截图20160610151607488.png" alt="折腾一：折腾前"><br>折腾后：<img src="http://o8a5cj75f.bkt.clouddn.com/360截图20160610151552178.png" alt="折腾一：折腾后"></p>
+<h2 id="折腾二"><a href="#折腾二" class="headerlink" title="折腾二"></a>折腾二</h2><blockquote>
+<p>网站 <strong>title</strong> 设置显示后缀“page + title”</p>
+</blockquote>
+<p>失败次数：<strong>0</strong> 次<br>失败原因：无<br>解决方法：获取根配置文件的 <strong>title</strong> and <strong>description</strong><br>最终代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title</span><br><span class="line">  if page.title</span><br><span class="line">= page.title + &apos; - &apos; + config.title</span><br><span class="line">  else</span><br><span class="line">= config.title + &apos; - &apos; + config.description</span><br></pre></td></tr></table></figure>
+<p>折腾前：<img src="http://o8a5cj75f.bkt.clouddn.com/360截图20160610151448982.png" alt="折腾二：折腾前"><br>折腾后：<img src="http://o8a5cj75f.bkt.clouddn.com/360截图20160610151521018.png" alt="折腾二：折腾后"></p>
+<blockquote>
+<p><strong>PS：</strong> <em>以上代码为jade语言，抱走代码时请修改，网站boom本博客概不负责。</em></p>
+</blockquote>
+
+      
+    </div>
+    <footer>
+      
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5795d2cc227a00f0"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+  
+    <div style="padding:10px 0;margin:20px auto;width:100%;text-align:center"><a id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"><span>Reward</span></a>
+      <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block"><img id="wechat_qr" src="https://caisiduo.xyz/img/微信打赏.png" alt="https://caisiduo.xyz/img/微信打赏.png"/>
+          <p>Wechat reward</p>
+        </div>
+        <div id="alipay" style="display: inline-block"><img id="alipay_qr" src="https://caisiduo.xyz/img/支付宝打赏.png" alt="https://caisiduo.xyz/img/支付宝打赏.png"/>
+          <p>Alipay reward</p>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+  <div id="comment">
+  
+  <!-- 多说评论框 start -->
+   <div class="ds-thread" data-thread-key="archives/折腾记录：16-6-10/" data-title="折腾记录：16/6/10" data-url="https://caisiduo.xyz/archives/折腾记录：16-6-10/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"caisiduo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//caisiduo.xyz/js/duoshuo.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
+  
+  </div>
+
+</div></div>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><p>
+  
+  &copy; 2016 蔡锶铎
+  
+</p>
+<ul>
+    
+      <li class="links">
+        
+          <a href="http://www.anotaku.com" target="_blank" title="AnOtaku">AnOtaku</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://siitake.cn" target="_blank" title="香菇">香菇</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://daphnechang.github.io" target="_blank" title="花花丹">花花丹</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://qqdie.com" target="_blank" title="Jrotty">Jrotty</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://www.wecho.cc" target="_blank" title="SNlone">SNlone</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://techair.cc" target="_blank" title="飞翔的技术宅">飞翔的技术宅</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://hran.me" target="_blank" title="Hran">Hran</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://krag.me" target="_blank" title="KRAG">KRAG</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://www.ihewro.com" target="_blank" title="一日">一日</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://etherking.blog.fc2blog.us" target="_blank" title="彼岸之幻">彼岸之幻</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://www.dreamwings.cn" target="_blank" title="若是凉夜已成梦">若是凉夜已成梦</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://mashirosbaumkuchen.com" target="_blank" title="Little Forest.">Little Forest.</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://xiaochunjie.me" target="_blank" title="小纯洁">小纯洁</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://blog.just666.cn" target="_blank" title="Shawn">Shawn</a>
+        
+      </li>
+    
+</ul>
+<div class="clearfix"></div></footer>
+  
+<script type="text/javascript">
+var targetProtocol = "https:";if (window.location.protocol != targetProtocol) 
+window.location.href = targetProtocol +  
+window.location.href.substring
+(window.location.protocol.length);
+</script>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
