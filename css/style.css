@@ -700,9 +700,9 @@ img.biaoqing,
 img.paopao,
 #ds-thread #ds-reset .ds-comment-body img.paopao {
   margin-bottom: -5px;
-  height: 32px;
-  width: 32px;
-  max-width: 32px;
+  height: 30px;
+  width: 30px;
+  max-width: 30px;
 }
 #ds-thread #ds-reset .ds-paginator {
   margin-bottom: 10px !important;
@@ -723,11 +723,11 @@ img.paopao,
   -webkit-border-radius: 50% !important;
   border-radius: 50% !important;
 }
-#ds-thread #ds-reset .ds-paginator a:hover {
+#ds-thread #ds-reset .ds-paginator ahover {
   background: #fff !important;
   color: #ff95b8 !important;
 }
-#ds-thread #ds-reset a.ds-user-name[data-user-id='6272634163120046849']:after {
+#ds-thread #ds-reset a.ds-user-name[data-user-id='6272634163120046849']after {
   content: "博主";
   margin-left: 6px;
   font-size: 12px;
