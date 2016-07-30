@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://caisiduo.xyz/"/>
-  <updated>2016-07-30T13:22:02.000Z</updated>
+  <updated>2016-07-30T14:56:02.000Z</updated>
   <id>https://caisiduo.xyz/</id>
   
   <author>
@@ -14,6 +14,106 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MarkDown快速入门</title>
+    <link href="https://caisiduo.xyz/archives/MarkDown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    <id>https://caisiduo.xyz/archives/MarkDown基本语法/</id>
+    <published>2016-07-30T14:23:47.000Z</published>
+    <updated>2016-07-30T14:56:02.000Z</updated>
+    
+    <content type="html">&lt;p&gt;用MarkDown的时候我都太依赖编辑器的快捷键了，搞的一堆语法都记不住，正好闲的没事干，转下&lt;a href=&quot;http://www.ihewro.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一日&lt;/a&gt;的这篇文章记下语法留着备用吧。原文地址：&lt;a href=&quot;http://www.ihewro.com/archives/152/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown快速入门&lt;/a&gt;。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;!--more--&gt;
+&lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;&lt;strong&gt;标题&lt;/strong&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;H1~H6： 在文字前面加上1~6个#&lt;/li&gt;
+&lt;li&gt;高阶标题和次高阶标题：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;这是高阶标题（效果和一级标题一样 ）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;========( ≥2个即可，同下 )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;这是次阶标题（效果和二级标题一样）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--------------&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;正文基本功能&quot;&gt;&lt;a href=&quot;#正文基本功能&quot; class=&quot;headerlink&quot; title=&quot;正文基本功能&quot;&gt;&lt;/a&gt;&lt;strong&gt;正文基本功能&lt;/strong&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;加粗：&lt;code&gt;**文字**&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;斜体：&lt;code&gt;*斜体*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除线：&lt;code&gt;~~删除线~~&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;无序列表：&lt;code&gt;*或-或+（空格）文字&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注释：无序列表的项目符号是按照实心圆、空心圆、实心方格的层级关系递进的(Tab键)&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+ 呵呵&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    * 嘉嘉&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - 嘻嘻&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    - 吼吼&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        - 嘎嘎&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        + 桀桀&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* 哈哈&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;有序列表：&lt;code&gt;1.(空格)文字&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;引用：使用&lt;code&gt;&amp;gt;&lt;/code&gt;表示引用，&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;表示引用里面再套一层引用，依次类推。&lt;/li&gt;
+&lt;li&gt;代码：&lt;ol&gt;
+&lt;li&gt;行内代码：（实现了代码和文字混排）一对反撇号&lt;/li&gt;
+&lt;li&gt;代码块：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;*   字号、字体、颜色、背景色：markdown没有直接的规则，但是可以直接使用HTML代码&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;font face=&quot;STCAIYUN&quot;&gt;我是华文彩云&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color=&quot;gray&quot; size=&quot;5&quot;&gt;color=gray&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color=&quot;#0099ff&quot; size=&quot;5&quot; face=&quot;黑体&quot;&gt;color=#0099ff size=5 face=”黑体”&lt;/font&gt;&lt;/p&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#FF4500&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;br&gt;&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=&quot;#FF4500&quot;&gt;（这里面添加文字）这里的背景色是：OrangeRed，  十六进制颜色值：#FF4500， rgb(255, 69, 0)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*   hr横线&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用`---`或者`***`或者`* * *`表示水平分割线。（≥3个）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;注释：使用`---`作为水平分割线时，要在它的前后都空一行，防止`---`被当成标题标记的表示方式。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### **正文高级功能**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*   **链接**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1.  行内形式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     `[链接标题]（链接地址）`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     或者&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     `[链接标题]（链接地址&amp;quot;your title&amp;quot;）`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2.  参考形式&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这里是&lt;a href=&quot;http://www.ihewro.com&quot; title=&quot;个人博客（链接描述）&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;我的博客&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1.  简写url&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     `&amp;lt;http://www.baidu.com&amp;gt;`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*   **图片**（在链接前面加个英文!）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1.  行内形式&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;![图片名称]&lt;img src=&quot;/path/to/img.jpg(空格&quot; alt=&quot;Alt text&quot;&gt;“Optional title”)&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1.  参考形式&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;url(空格)&amp;quot;可选title&amp;quot;&quot; alt=&quot;alt_text&quot;&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*   **表格**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;使用说明：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;`------:`为右对齐。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; `------:`为左对齐。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; `:------:`为居中对齐。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; `-------`为使用默认居中对齐。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;Left align&lt;/th&gt;
+&lt;th style=&quot;text-align:right&quot;&gt;Right align&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Center align&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;This&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;This&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;This&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;column&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;column&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;column&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;will&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;will&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;will&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;be&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;be&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;be&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;left&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;right&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;center&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;aligned&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;aligned&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;aligned&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;```&lt;/p&gt;
+&lt;h3 id=&quot;推荐工具&quot;&gt;&lt;a href=&quot;#推荐工具&quot; class=&quot;headerlink&quot; title=&quot;推荐工具&quot;&gt;&lt;/a&gt;推荐工具&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://tool.lu/tables/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;在线转换MD表格&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://tool.lu/markdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;html转markdown&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;推荐阅读&quot;&gt;&lt;a href=&quot;#推荐阅读&quot; class=&quot;headerlink&quot; title=&quot;推荐阅读&quot;&gt;&lt;/a&gt;推荐阅读&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://wowubuntu.com/markdown/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown 语法说明 (简体中文版)&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;参考文章&quot;&gt;&lt;a href=&quot;#参考文章&quot; class=&quot;headerlink&quot; title=&quot;参考文章&quot;&gt;&lt;/a&gt;参考文章&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.linpx.com/p/simple-markdown-entry.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;简易Markdown入门上手&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://lutaf.com/markdown-simple-usage.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;markdown 简明语法&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://wowubuntu.com/markdown/basic.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown: Basics （快速入门）&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.zybuluo.com/AntLog/note/63228&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown，你只需要掌握这几个&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用MarkDown的时候我都太依赖编辑器的快捷键了，搞的一堆语法都记不住，正好闲的没事干，转下&lt;a href=&quot;http://www.ihewro.com&quot;&gt;一日&lt;/a&gt;的这篇文章记下语法留着备用吧。原文地址：&lt;a href=&quot;http://www.ihewro.com/archives/152/&quot;&gt;Markdown快速入门&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>把多说表情框内的表情换成自己的表情</title>
