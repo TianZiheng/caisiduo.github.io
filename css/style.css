@@ -531,42 +531,25 @@ article footer .addthis iframe {
   margin-bottom: 15px;
 }
 #ds-thread {
+  width: 800px;
   border: none;
 }
-@media screen and (max-width: 1081px) {
-  #ds-thread {
-    margin: 1%;
-    margin: 1%;
-    width: 98%;
-  }
-}
-#ds-smilies-tooltip ul.ds-smilies-tabs {
-  display: none;
-}
-#ds-smilies-tooltip .ds-smilies-container {
-  margin-left: 0 !important;
-}
-#ds-smilies-tooltip .ds-smilies-container li {
-  width: 40px !important;
-  height: 40px !important;
-}
 #ds-thread .ds-powered-by,
-#ds-thread .ds-sync,
-#ds-thread .ds-meta {
+#ds-thread .ds-sync {
   display: none !important;
 }
 #ds-thread #ds-reset .ds-post-options {
   margin-top: 5px;
   margin-bottom: -13px;
-  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0px;
   border: none;
-  background: 0 0;
+  background: none;
 }
 #ds-thread #ds-reset .ds-post-button {
   width: 150px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  background: #22bd77;
+  background: #5b6064;
   color: #fff;
   margin-left: 50px;
 }
@@ -581,8 +564,15 @@ article footer .addthis iframe {
   border-radius: 5px;
   background: #f5f5f5;
 }
+@media screen and (max-width: 1081px) {
+  #ds-thread {
+    margin: 1%;
+    margin: 1%;
+    width: 98%;
+  }
+}
 #ds-reset .ds-avatar {
-  background: 0 0;
+  background: none;
 }
 #ds-reset .ds-avatar img {
   border: 2px solid #fff;
@@ -602,18 +592,18 @@ article footer .addthis iframe {
 }
 #ds-thread .ds-replybox .ds-avatar {
   display: none !important;
-  width: 0 !important;
-  height: 0 !important;
+  width: 0px !important;
+  height: 0px !important;
 }
 #ds-thread #ds-reset li.ds-tab a.ds-current {
   border: none;
   background-color: rgba(255,255,255,0);
 }
-#ds-thread #ds-reset .ds-post-self,
 #ds-thread #ds-reset li.ds-post {
   border: none;
 }
 #ds-thread #ds-reset .ds-post-self {
+  border: none;
   background: #f5f5f5;
   margin-bottom: 10px;
   -webkit-border-radius: 5px;
@@ -650,9 +640,9 @@ article footer .addthis iframe {
   background: #fff;
 }
 #ds-wrapper #ds-reset .ds-dialog-inner {
-  -webkit-box-shadow: 0 10px 10px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 1px 3px 7px 0 rgba(0,0,0,0.12), 0 0 20px 5px rgba(0,0,0,0.12);
-  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 1px 3px 7px 0 rgba(0,0,0,0.12), 0 0 20px 5px rgba(0,0,0,0.12);
-  border: 0;
+  -webkit-box-shadow: 0px 10px 10px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 1px 3px 7px 0 rgba(0,0,0,0.12), 0px 0px 20px 5px rgba(0,0,0,0.12);
+  box-shadow: 0px 10px 10px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 1px 3px 7px 0 rgba(0,0,0,0.12), 0px 0px 20px 5px rgba(0,0,0,0.12);
+  border: 0px;
   background: #fff;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -666,14 +656,14 @@ article footer .addthis iframe {
   width: 100%;
 }
 #ds-thread #ds-reset #ds-hot-posts {
-  border: 0 solid #ccc;
+  border: 0px solid #ccc;
   overflow: hidden;
   margin: 8px 0;
   padding: 0;
   height: 100%;
 }
 #ds-thread #ds-reset .ds-header {
-  font-weight: 700;
+  font-weight: bold;
   font-size: 14px;
   color: #555;
   line-height: 30px;
@@ -691,6 +681,36 @@ article footer .addthis iframe {
 }
 #ds-notify #ds-reset .ds-logo {
   margin-top: 5px;
+}
+#ds-thread #ds-reset .ds-paginator {
+  margin-bottom: 10px !important;
+}
+#ds-thread #ds-reset .ds-paginator .ds-current {
+  border: 0 !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  -webkit-box-shadow: 1px 1px 5px #ddd;
+  box-shadow: 1px 1px 5px #ddd;
+  background: #fff !important;
+}
+#ds-thread #ds-reset .ds-paginator a {
+  font-size: 12px;
+  margin: 0 3px;
+  padding: 10px 14px !important;
+  border: 0px solid transparent !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+#ds-thread #ds-reset .ds-paginator ahover {
+  background: #fff !important;
+  color: #ff95b8 !important;
+}
+@media screen and (max-width: 1081px) {
+  #ds-thread #ds-reset .ds-textarea-wrapper {
+    margin-left: -38px;
+    width: calc(100% + 50px) !important;
+    border: none;
+  }
 }
 img.biaoqing,
 #ds-thread #ds-reset .ds-comment-body img.biaoqing {
