@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://caisiduo.xyz/"/>
-  <updated>2016-07-30T15:09:18.000Z</updated>
+  <updated>2016-07-30T15:29:22.000Z</updated>
   <id>https://caisiduo.xyz/</id>
   
   <author>
@@ -20,10 +20,9 @@
     <link href="https://caisiduo.xyz/archives/MarkDown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
     <id>https://caisiduo.xyz/archives/MarkDown基本语法/</id>
     <published>2016-07-30T14:23:47.000Z</published>
-    <updated>2016-07-30T15:09:18.000Z</updated>
+    <updated>2016-07-30T15:29:22.000Z</updated>
     
     <content type="html">&lt;p&gt;用MarkDown的时候我都太依赖编辑器的快捷键了，搞的一堆语法都记不住，正好闲的没事干，转下&lt;a href=&quot;http://www.ihewro.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一日&lt;/a&gt;的这篇文章记下语法留着备用吧。原文地址：&lt;a href=&quot;http://www.ihewro.com/archives/152/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown快速入门&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://caisiduo.xyz/img/MarkDown.png&quot; alt=&quot;MarkDown&quot;&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h3 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;&lt;strong&gt;标题&lt;/strong&gt;&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;H1~H6： 在文字前面加上1~6个#&lt;/li&gt;
@@ -37,7 +36,7 @@
 &lt;li&gt;无序列表：&lt;code&gt;*或-或+（空格）文字&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;注释：无序列表的项目符号是按照实心圆、空心圆、实心方格的层级关系递进的(Tab键)&lt;/p&gt;
-&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;+   &lt;/span&gt;呵呵&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;    * 嘉嘉&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;    -   嘻嘻&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;    -   吼吼&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;        - 嘎嘎&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;        + 桀桀&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;* &lt;/span&gt;哈哈&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;    &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;+   &lt;/span&gt;呵呵&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;    * 嘉嘉&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;    -   嘻嘻&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;    -   吼吼&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;        - 嘎嘎&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;        + 桀桀&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;* &lt;/span&gt;哈哈&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;      &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;有序列表：&lt;code&gt;1.(空格)文字&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;引用：使用&lt;code&gt;&amp;gt;&lt;/code&gt;表示引用，&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;表示引用里面再套一层引用，依次类推。&lt;/li&gt;
@@ -92,7 +91,6 @@
     <summary type="html">
     
       &lt;p&gt;用MarkDown的时候我都太依赖编辑器的快捷键了，搞的一堆语法都记不住，正好闲的没事干，转下&lt;a href=&quot;http://www.ihewro.com&quot;&gt;一日&lt;/a&gt;的这篇文章记下语法留着备用吧。原文地址：&lt;a href=&quot;http://www.ihewro.com/archives/152/&quot;&gt;Markdown快速入门&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://caisiduo.xyz/img/MarkDown.png&quot; alt=&quot;MarkDown&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -249,9 +247,9 @@
     <link href="https://caisiduo.xyz/archives/Node%E5%BC%80%E5%8F%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%92%8C%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7/"/>
     <id>https://caisiduo.xyz/archives/Node开发常见问题和基础工具/</id>
     <published>2016-07-20T07:00:32.000Z</published>
-    <updated>2016-07-23T13:37:38.000Z</updated>
+    <updated>2016-07-30T15:30:12.000Z</updated>
     
-    <content type="html">&lt;p&gt;Node.js 的生态圈发展迅速，各种工具层出不穷，本文缩减了原文中的大部分内容，只列出 Node.js 开发中需要注意的方面。&lt;br&gt;&lt;img src=&quot;https://caisiduo.xyz/img/Node.js.png&quot; alt=&quot;Node.js&quot; title=&quot;Node.js&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Node.js 的生态圈发展迅速，各种工具层出不穷，本文缩减了原文中的大部分内容，只列出 Node.js 开发中需要注意的方面。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;使用开发工具自动重启 Node.js 服务或自动刷新浏览器页面，比如 &lt;a href=&quot;http://nodemon.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nodemon&lt;/a&gt; 和 &lt;a href=&quot;https://www.browsersync.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;browsersync&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;使用工具监控事件循环运行情况，避免异常事件长时间阻塞代码执行，比如 &lt;a href=&quot;http://docs.strongloop.com/display/SLA/Application+monitoring&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;strongops&lt;/a&gt; 和 &lt;a href=&quot;http://npm.im/blocked&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;blocked&lt;/a&gt;&lt;/li&gt;
@@ -268,7 +266,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;Node.js 的生态圈发展迅速，各种工具层出不穷，本文缩减了原文中的大部分内容，只列出 Node.js 开发中需要注意的方面。&lt;br&gt;&lt;img src=&quot;https://caisiduo.xyz/img/Node.js.png&quot; alt=&quot;Node.js&quot; title=&quot;Node.js&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;Node.js 的生态圈发展迅速，各种工具层出不穷，本文缩减了原文中的大部分内容，只列出 Node.js 开发中需要注意的方面。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;使用开发工具自动重启 Node.js 服务或自动刷新浏览器页面，比如 &lt;a href=&quot;http://nodemon.io/&quot;&gt;nodemon&lt;/a&gt; 和 &lt;a href=&quot;https://www.browsersync.io/&quot;&gt;browsersync&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;使用工具监控事件循环运行情况，避免异常事件长时间阻塞代码执行，比如 &lt;a href=&quot;http://docs.strongloop.com/display/SLA/Application+monitoring&quot;&gt;strongops&lt;/a&gt; 和 &lt;a href=&quot;http://npm.im/blocked&quot;&gt;blocked&lt;/a&gt;&lt;/li&gt;
@@ -521,9 +519,9 @@
     <link href="https://caisiduo.xyz/archives/%E5%BD%95%E5%8F%96%E9%80%9A%E7%9F%A5%E4%B9%A6%E5%B7%B2%E5%88%B0/"/>
     <id>https://caisiduo.xyz/archives/录取通知书已到/</id>
     <published>2016-07-12T06:41:08.000Z</published>
-    <updated>2016-07-15T09:23:48.000Z</updated>
+    <updated>2016-07-30T15:30:48.000Z</updated>
     
-    <content type="html">&lt;p&gt;组织们请放心，已经考砸了！&lt;br&gt;昨晚老湿在群里说今天&lt;code&gt;10:30&lt;/code&gt;得去学校领录取通知书，然而正在吃饭，？：“锶铎！” 【探头】尼玛居然给我送来了！，这TM才&lt;code&gt;10:00&lt;/code&gt;啊！于是接下通知书，尼玛！初级中学！&lt;br&gt;&lt;img src=&quot;https://caisiduo.xyz/img/录取通知书.png&quot; alt=&quot;https&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;组织们请放心，已经考砸了！&lt;br&gt;昨晚老湿在群里说今天&lt;code&gt;10:30&lt;/code&gt;得去学校领录取通知书，然而正在吃饭，？：“锶铎！” 【探头】尼玛居然给我送来了！，这TM才&lt;code&gt;10:00&lt;/code&gt;啊！于是接下通知书，尼玛！初级中学！&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h3 id=&quot;last-night&quot;&gt;&lt;a href=&quot;#last-night&quot; class=&quot;headerlink&quot; title=&quot;last night&quot;&gt;&lt;/a&gt;last night&lt;/h3&gt;&lt;p&gt;闲的没事上扣扣，发现同学在讨论明天去不去学校，翻了下聊天记录。&lt;br&gt;&lt;img src=&quot;https://caisiduo.xyz/img/聊天截图2.png&quot; alt=&quot;聊天记录&quot;&gt;&lt;br&gt;身为管理员，我应该马上&lt;del&gt;禁言&lt;/del&gt;发个公告，然后身为班里最机智【对，没划掉】的人，我应该马上去准备明天的事情！然后接着玩游戏。&lt;br&gt;然后就没有然后了。&lt;/p&gt;
 &lt;div class=&quot;tip&quot;&gt;&lt;br&gt;初级中学是这边最普通的中学，明天&lt;code&gt;2016/07/12&lt;/code&gt;得去报名入学了。&lt;br&gt;&lt;/div&gt;
@@ -534,7 +532,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;组织们请放心，已经考砸了！&lt;br&gt;昨晚老湿在群里说今天&lt;code&gt;10:30&lt;/code&gt;得去学校领录取通知书，然而正在吃饭，？：“锶铎！” 【探头】尼玛居然给我送来了！，这TM才&lt;code&gt;10:00&lt;/code&gt;啊！于是接下通知书，尼玛！初级中学！&lt;br&gt;&lt;img src=&quot;https://caisiduo.xyz/img/录取通知书.png&quot; alt=&quot;https&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;组织们请放心，已经考砸了！&lt;br&gt;昨晚老湿在群里说今天&lt;code&gt;10:30&lt;/code&gt;得去学校领录取通知书，然而正在吃饭，？：“锶铎！” 【探头】尼玛居然给我送来了！，这TM才&lt;code&gt;10:00&lt;/code&gt;啊！于是接下通知书，尼玛！初级中学！&lt;/p&gt;
     
     </summary>
     
@@ -546,9 +544,11 @@
     <link href="https://caisiduo.xyz/archives/%E6%88%91%E6%AF%95%E4%B8%9A%E4%BA%86%E2%80%A6%E2%80%A6/"/>
     <id>https://caisiduo.xyz/archives/我毕业了……/</id>
     <published>2016-07-07T03:23:18.000Z</published>
-    <updated>2016-07-19T08:13:12.000Z</updated>
+    <updated>2016-07-30T15:31:44.000Z</updated>
     
-    <content type="html">&lt;p&gt;昨天考完试了，也毕业了……&lt;br&gt;想想时间过得真快啊，已经六年了，感觉昨天还是一个一年级的小渣渣呢。&lt;br&gt;这六年也经历了很多，从数一数二的打手变成了数一数二的懒虫！？&lt;br&gt;成绩也从好变坏，从坏变好，一高一低。&lt;br&gt;&lt;img src=&quot;https://caisiduo.xyz/img/学校.png&quot; alt=&quot;学校&quot;&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;今天是暑假第一天，按理说应该高兴的。可就感觉心情挺沉重的。&lt;/p&gt;
+    <content type="html">&lt;p&gt;昨天考完试了，也毕业了……&lt;br&gt;想想时间过得真快啊，已经六年了，感觉昨天还是一个一年级的小渣渣呢。&lt;br&gt;这六年也经历了很多，从数一数二的打手变成了数一数二的懒虫！？&lt;br&gt;成绩也从好变坏，从坏变好，一高一低。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;今天是暑假第一天，按理说应该高兴的。可就感觉心情挺沉重的。&lt;/p&gt;
 &lt;p&gt;早上老师来家访了，跟妈聊了一堆关于我学习的事，听着还挺烦的，老师来了打了声招呼之后就用窗帘掉了去修，然后去房间了。我就是在逃避嘛。&lt;/p&gt;
 &lt;p&gt;同学们也不知道在干嘛，今天一大早同桌就Q我，尼玛&lt;code&gt;7:04&lt;/code&gt;，我平时起床才&lt;code&gt;7:20&lt;/code&gt;，以为有什么事找我，一打开……&lt;br&gt;&lt;img src=&quot;https://caisiduo.xyz/img/聊天截图1.png&quot; alt=&quot;同学聊天截图&quot;&gt;&lt;br&gt;简直WQNMLGB&lt;/p&gt;
 &lt;p&gt;瞬间觉得什么心情沉重都是浮云，我的同学就是这样啊。&lt;br&gt;但还是希望中学能再见……&lt;/p&gt;
@@ -556,7 +556,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;昨天考完试了，也毕业了……&lt;br&gt;想想时间过得真快啊，已经六年了，感觉昨天还是一个一年级的小渣渣呢。&lt;br&gt;这六年也经历了很多，从数一数二的打手变成了数一数二的懒虫！？&lt;br&gt;成绩也从好变坏，从坏变好，一高一低。&lt;br&gt;&lt;img src=&quot;https://caisiduo.xyz/img/学校.png&quot; alt=&quot;学校&quot;&gt;&lt;br&gt;
+      &lt;p&gt;昨天考完试了，也毕业了……&lt;br&gt;想想时间过得真快啊，已经六年了，感觉昨天还是一个一年级的小渣渣呢。&lt;br&gt;这六年也经历了很多，从数一数二的打手变成了数一数二的懒虫！？&lt;br&gt;成绩也从好变坏，从坏变好，一高一低。&lt;/p&gt;
     
     </summary>
     
@@ -624,9 +624,9 @@
     <link href="https://caisiduo.xyz/archives/%E4%BA%BA%E7%94%9F%E7%AC%AC%E4%B8%80%E6%94%AF%E9%92%A2%E7%AC%94%E5%88%B0%E4%BA%86%EF%BC%81/"/>
     <id>https://caisiduo.xyz/archives/人生第一支钢笔到了！/</id>
     <published>2016-06-25T02:12:09.000Z</published>
-    <updated>2016-07-15T09:24:22.000Z</updated>
+    <updated>2016-07-30T15:32:28.000Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;img src=&quot;https://caisiduo.xyz/img/钢笔.png&quot; alt=&quot;钢笔&quot;&gt;&lt;br&gt;就在昨天晚上，窝人参滴第一支钢笔终于到惹！商家那边还免费刻了个字送了个笔尖还送了个墨水，真是业界良心啊！&lt;br&gt;在对比当中，发现这家的钢笔最便宜最好看！于是就买了=w=，不准说我贪小便宜！&lt;/p&gt;
+    <content type="html">&lt;p&gt;就在昨天晚上，窝人参滴第一支钢笔终于到惹！商家那边还免费刻了个字送了个笔尖还送了个墨水，真是业界良心啊！&lt;br&gt;在对比当中，发现这家的钢笔最便宜最好看！于是就买了=w=，不准说我贪小便宜！&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h3 id=&quot;first-day&quot;&gt;&lt;a href=&quot;#first-day&quot; class=&quot;headerlink&quot; title=&quot;first day&quot;&gt;&lt;/a&gt;first day&lt;/h3&gt;&lt;p&gt;刚买来的时候急忙拆开包装【人生第一次拆包】，启动徒手拆包技能：硬扯&lt;br&gt;拆开后发现里面防护措施不错嘛，两张泡泡纸，墨水和笔盒分别包住【已经拆了所以没图】，大概包了3层。然后又是暴力拆解法，一个 &lt;del&gt;花生&lt;/del&gt;&lt;code&gt;华生金笔&lt;/code&gt;的字样。打开后笔上面果然刻上了&lt;code&gt;CSD&lt;/code&gt;的字=w=，感觉屌屌哒。&lt;/p&gt;
 &lt;p&gt;然后拆开墨水包装，没有漏，不错。然后发现钢笔里自带吸墨器，就网上查了下吸墨器的用法，试了试，成功了。不过手上还是沾了墨水，就去洗了下手。就在这短短的5分钟！我妹妹把钢笔摔了！&lt;del&gt;FUCK&lt;/del&gt;&lt;/p&gt;
@@ -637,7 +637,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://caisiduo.xyz/img/钢笔.png&quot; alt=&quot;钢笔&quot;&gt;&lt;br&gt;就在昨天晚上，窝人参滴第一支钢笔终于到惹！商家那边还免费刻了个字送了个笔尖还送了个墨水，真是业界良心啊！&lt;br&gt;在对比当中，发现这家的钢笔最便宜最好看！于是就买了=w=，不准说我贪小便宜！&lt;/p&gt;
+      &lt;p&gt;就在昨天晚上，窝人参滴第一支钢笔终于到惹！商家那边还免费刻了个字送了个笔尖还送了个墨水，真是业界良心啊！&lt;br&gt;在对比当中，发现这家的钢笔最便宜最好看！于是就买了=w=，不准说我贪小便宜！&lt;/p&gt;
     
     </summary>
     
