@@ -692,6 +692,18 @@ article footer .addthis iframe {
 #ds-notify #ds-reset .ds-logo {
   margin-top: 5px;
 }
+img.biaoqing,
+#ds-thread #ds-reset .ds-comment-body img.biaoqing {
+  display: inline;
+  margin: 0;
+}
+img.paopao,
+#ds-thread #ds-reset .ds-comment-body img.paopao {
+  margin-bottom: -5px;
+  height: 32px;
+  width: 32px;
+  max-width: 32px;
+}
 #ds-thread #ds-reset .ds-paginator {
   margin-bottom: 10px !important;
 }
