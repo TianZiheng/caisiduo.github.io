@@ -64,12 +64,11 @@
       
         <p>用MarkDown的时候我都太依赖编辑器的快捷键了，搞的一堆语法都记不住，正好闲的没事干，转下<a href="http://www.ihewro.com" target="_blank" rel="external">一日</a>的这篇文章记下语法留着备用吧。原文地址：<a href="http://www.ihewro.com/archives/152/" target="_blank" rel="external">Markdown快速入门</a>。</p>
 <a id="more"></a>
-<!--more-->
 <h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a><strong>标题</strong></h3><ul>
 <li>H1~H6： 在文字前面加上1~6个#</li>
 <li>高阶标题和次高阶标题：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">这是高阶标题（效果和一级标题一样 ）</span><br><span class="line">========( ≥2个即可，同下 )</span><br><span class="line">这是次阶标题（效果和二级标题一样）</span><br><span class="line">--------------</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">这是高阶标题（效果和一级标题一样 ）</span><br><span class="line">========( ≥2个即可，同下 )</span><br><span class="line"><span class="section">这是次阶标题（效果和二级标题一样）</span><br><span class="line">--------------</span></span><br></pre></td></tr></table></figure>
 <h3 id="正文基本功能"><a href="#正文基本功能" class="headerlink" title="正文基本功能"></a><strong>正文基本功能</strong></h3><ul>
 <li>加粗：<code>**文字**</code></li>
 <li>斜体：<code>*斜体*</code></li>
@@ -77,70 +76,53 @@
 <li>无序列表：<code>*或-或+（空格）文字</code></li>
 </ul>
 <p>注释：无序列表的项目符号是按照实心圆、空心圆、实心方格的层级关系递进的(Tab键)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+ 呵呵</span><br><span class="line">    * 嘉嘉</span><br><span class="line">    - 嘻嘻</span><br><span class="line">    - 吼吼</span><br><span class="line">        - 嘎嘎</span><br><span class="line">        + 桀桀</span><br><span class="line">* 哈哈</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+   </span>呵呵</span><br><span class="line"><span class="code">    * 嘉嘉</span></span><br><span class="line"><span class="code">    -   嘻嘻</span></span><br><span class="line"><span class="code">    -   吼吼</span></span><br><span class="line"><span class="code">        - 嘎嘎</span></span><br><span class="line"><span class="code">        + 桀桀</span></span><br><span class="line"><span class="bullet">* </span>哈哈</span><br><span class="line"><span class="code">    </span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>有序列表：<code>1.(空格)文字</code></li>
 <li>引用：使用<code>&gt;</code>表示引用，<code>&gt;&gt;</code>表示引用里面再套一层引用，依次类推。</li>
 <li>代码：<ol>
 <li>行内代码：（实现了代码和文字混排）一对反撇号</li>
-<li>代码块：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*   字号、字体、颜色、背景色：markdown没有直接的规则，但是可以直接使用HTML代码</span><br></pre></td></tr></table></figure></li>
+<li>代码块：<code>后面跟上语言名称（也可省略)\n代码</code></li>
 </ol>
 </li>
+<li>字号、字体、颜色、背景色：markdown没有直接的规则，但是可以直接使用HTML代码</li>
 </ul>
-<p><font face="STCAIYUN">我是华文彩云</font></p>
-<p><font color="gray" size="5">color=gray</font></p>
-<p><font color="#0099ff" size="5" face="黑体">color=#0099ff size=5 face=”黑体”</font></p>
-<table><tr><td bgcolor="#FF4500"></td></tr></table><br><table><tr><td bgcolor="#FF4500">（这里面添加文字）这里的背景色是：OrangeRed，  十六进制颜色值：#FF4500， rgb(255, 69, 0)</td></tr></table>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">*   hr横线</span><br><span class="line"></span><br><span class="line">使用`---`或者`***`或者`* * *`表示水平分割线。（≥3个）</span><br><span class="line"></span><br><span class="line">注释：使用`---`作为水平分割线时，要在它的前后都空一行，防止`---`被当成标题标记的表示方式。</span><br><span class="line"></span><br><span class="line">### **正文高级功能**</span><br><span class="line"></span><br><span class="line">*   **链接**</span><br><span class="line"></span><br><span class="line">1.  行内形式</span><br><span class="line">     `[链接标题]（链接地址）`</span><br><span class="line">     或者</span><br><span class="line">     `[链接标题]（链接地址&quot;your title&quot;）`</span><br><span class="line"></span><br><span class="line">2.  参考形式</span><br></pre></td></tr></table></figure>
-<p>这里是<a href="http://www.ihewro.com" title="个人博客（链接描述）" target="_blank" rel="external">我的博客</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1.  简写url</span><br><span class="line">     `&lt;http://www.baidu.com&gt;`</span><br><span class="line"></span><br><span class="line">*   **图片**（在链接前面加个英文!）</span><br><span class="line"></span><br><span class="line">1.  行内形式</span><br></pre></td></tr></table></figure>
-<p>![图片名称]<img src="/path/to/img.jpg(空格" alt="Alt text">“Optional title”)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1.  参考形式</span><br></pre></td></tr></table></figure>
-<p><img src="url(空格)&quot;可选title&quot;" alt="alt_text"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">*   **表格**</span><br><span class="line"></span><br><span class="line">使用说明：</span><br><span class="line"></span><br><span class="line">`------:`为右对齐。</span><br><span class="line"> `------:`为左对齐。</span><br><span class="line"> `:------:`为居中对齐。</span><br><span class="line"> `-------`为使用默认居中对齐。</span><br></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Left align</th>
-<th style="text-align:right">Right align</th>
-<th style="text-align:center">Center align</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">This</td>
-<td style="text-align:right">This</td>
-<td style="text-align:center">This</td>
-</tr>
-<tr>
-<td style="text-align:left">column</td>
-<td style="text-align:right">column</td>
-<td style="text-align:center">column</td>
-</tr>
-<tr>
-<td style="text-align:left">will</td>
-<td style="text-align:right">will</td>
-<td style="text-align:center">will</td>
-</tr>
-<tr>
-<td style="text-align:left">be</td>
-<td style="text-align:right">be</td>
-<td style="text-align:center">be</td>
-</tr>
-<tr>
-<td style="text-align:left">left</td>
-<td style="text-align:right">right</td>
-<td style="text-align:center">center</td>
-</tr>
-<tr>
-<td style="text-align:left">aligned</td>
-<td style="text-align:right">aligned</td>
-<td style="text-align:center">aligned</td>
-</tr>
-</tbody>
-</table>
-<p>```</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">"STCAIYUN"</span>&gt;</span>我是华文彩云<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">gray</span> <span class="attr">size</span>=<span class="string">5</span>&gt;</span>color=gray<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">#0099ff</span> <span class="attr">size</span>=<span class="string">5</span> <span class="attr">face</span>=<span class="string">"黑体"</span>&gt;</span>color=#0099ff size=5 face="黑体"<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span><span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">bgcolor</span>=<span class="string">#FF4500</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span><span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">bgcolor</span>=<span class="string">#FF4500</span>&gt;</span>（这里面添加文字）这里的背景色是：OrangeRed，  十六进制颜色值：#FF4500， rgb(255, 69, 0)<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>hr横线</li>
+</ul>
+<p>使用<code>---</code>或者<code>***</code>或者<code>* * *</code>表示水平分割线。（≥3个）</p>
+<p>注释：使用<code>---</code>作为水平分割线时，要在它的前后都空一行，防止<code>---</code>被当成标题标记的表示方式。</p>
+<h3 id="正文高级功能"><a href="#正文高级功能" class="headerlink" title="正文高级功能"></a><strong>正文高级功能</strong></h3><ul>
+<li><strong>链接</strong></li>
+</ul>
+<ol>
+<li><p>行内形式<br> <code>[链接标题]（链接地址）</code><br> 或者<br> <code>[链接标题]（链接地址&quot;your title&quot;）</code></p>
+</li>
+<li><p>参考形式</p>
+</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这里是[<span class="string">我的博客</span>][<span class="symbol">1</span>]</span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">https://caisiduo.xyz	"个人博客（链接描述）"</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>简写url<br> <code>&lt;http://www.baidu.com&gt;</code></li>
+</ol>
+<ul>
+<li><strong>图片</strong>（在链接前面加个英文!）</li>
+</ul>
+<ol>
+<li>行内形式</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片名称</span>]![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg(空格</span>)"Optional title")</span><br></pre></td></tr></table></figure>
+<ol>
+<li>参考形式</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">alt_text</span>][<span class="symbol">id</span>]</span><br><span class="line">[<span class="symbol">id</span>]: <span class="link">url(空格)&amp;quot;可选title&amp;quot;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>表格</strong></li>
+</ul>
+<p>使用说明：</p>
+<p><code>------:</code>为右对齐。<br> <code>------:</code>为左对齐。<br> <code>:------:</code>为居中对齐。<br> <code>-------</code>为使用默认居中对齐。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">| Left align | Right align | Center align |</span><br><span class="line">| :--------- | ----------: | :----------: |</span><br><span class="line">| This       |        This |     This     |</span><br><span class="line">| column     |      column |    column    |</span><br><span class="line">| will       |        will |     will     |</span><br><span class="line">| be         |          be |      be      |</span><br><span class="line">| left       |       right |    center    |</span><br><span class="line">| aligned    |     aligned |   aligned    |</span><br></pre></td></tr></table></figure>
 <h3 id="推荐工具"><a href="#推荐工具" class="headerlink" title="推荐工具"></a>推荐工具</h3><p><a href="http://tool.lu/tables/" target="_blank" rel="external">在线转换MD表格</a><br><a href="http://tool.lu/markdown/" target="_blank" rel="external">html转markdown</a></p>
 <h3 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h3><p><a href="http://wowubuntu.com/markdown/index.html" target="_blank" rel="external">Markdown 语法说明 (简体中文版)</a></p>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a href="https://www.linpx.com/p/simple-markdown-entry.html" target="_blank" rel="external">简易Markdown入门上手</a><br><a href="http://lutaf.com/markdown-simple-usage.htm" target="_blank" rel="external">markdown 简明语法</a><br><a href="http://wowubuntu.com/markdown/basic.html" target="_blank" rel="external">Markdown: Basics （快速入门）</a><br><a href="https://www.zybuluo.com/AntLog/note/63228" target="_blank" rel="external">Markdown，你只需要掌握这几个</a></p>
