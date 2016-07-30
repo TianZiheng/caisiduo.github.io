@@ -1,17 +1,11 @@
-@font-face {
-  font-family: 'FontAwesome';
-  font-style: normal;
-  font-weight: normal;
-  src: url("font/fontawesome-webfont.eot?#iefix") format('embedded-opentype'), url("font/fontawesome-webfont.woff") format('woff'), url("font/fontawesome-webfont.ttf") format('truetype'), url("font/fontawesome-webfont.svg#FontAwesomeRegular") format('svg');
-}
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  background: #eee;
-  color: #444;
-  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  background: color-background;
+  color: color-font;
+  font-family: font-default;
   font-size: 14px;
   text-shadow: 0 0 1px transparent;
 }
@@ -31,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: font-title;
 }
 h1 {
   font-size: 1.8em;
@@ -44,7 +38,7 @@ h3 {
 }
 a {
   text-decoration: none;
-  color: #42b983;
+  color: color-link;
 }
 a:hover {
   text-decoration: underline;
@@ -67,7 +61,7 @@ a:hover {
   clear: both;
 }
 .inner {
-  width: 900px;
+  width: page-width;
   margin: 0 auto;
 }
 @media screen and (max-width: 1260px) {
@@ -100,38 +94,41 @@ a:hover {
     margin-right: 0;
   }
 }
-#header {
-  text-shadow: 0 0 1px #fff;
-  margin: 50px auto;
+@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  src: url("font/fontawesome-webfont.eot?#iefix") format('embedded-opentype'), url("font/fontawesome-webfont.woff") format('woff'), url("font/fontawesome-webfont.ttf") format('truetype'), url("font/fontawesome-webfont.svg#FontAwesomeRegular") format('svg');
 }
-#header a {
+.archive-title {
   color: #999;
-}
-#header a:hover {
-  color: #42b983;
-  text-decoration: none;
-}
-#header h1 {
   font-weight: normal;
-  font-size: 2.5em;
-  line-height: 1;
+  margin-bottom: 30px;
+  text-shadow: 0 0 1px #fff;
 }
-#header h2 {
-  font-weight: normal;
-  font-size: 0.9em;
-  line-height: 1;
-  margin-top: 10px;
+.archive-title:before {
+  font-family: FontAwesome;
+  content: '\f073';
+  padding-right: 15px;
 }
-#header #main-nav {
-  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
-  line-height: 2.5em;
+.archive-title.tag:before {
+  content: '\f02b';
 }
-#header #main-nav ul {
-  list-style: none;
+.archive-title.category:before {
+  content: '\f07b';
 }
-#header #main-nav ul li {
-  float: left;
-  margin-left: 30px;
+.archive {
+  -webkit-box-shadow: 1px 2px 3px #ddd;
+  box-shadow: 1px 2px 3px #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 50px;
+}
+.archive article {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.archive article .post-content {
+  margin-bottom: 0;
 }
 article {
   -webkit-box-shadow: 1px 2px 3px #ddd;
@@ -2292,6 +2289,49 @@ article footer .addthis iframe {
     transform: translate(0, 0) rotate(0);
   }
 }
+#footer {
+  color: #999;
+  margin-bottom: 50px;
+  font: 0.9em/1.6 "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-shadow: 0 0 1px #fff;
+}
+.links {
+  width: 10em;
+  float: left;
+}
+#header {
+  text-shadow: 0 0 1px #fff;
+  margin: 50px auto;
+}
+#header a {
+  color: #999;
+}
+#header a:hover {
+  color: #42b983;
+  text-decoration: none;
+}
+#header h1 {
+  font-weight: normal;
+  font-size: 2.5em;
+  line-height: 1;
+}
+#header h2 {
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 1;
+  margin-top: 10px;
+}
+#header #main-nav {
+  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 2.5em;
+}
+#header #main-nav ul {
+  list-style: none;
+}
+#header #main-nav ul li {
+  float: left;
+  margin-left: 30px;
+}
 #pagination a {
   display: block;
   padding: 5px 10px;
@@ -2316,46 +2356,6 @@ article footer .addthis iframe {
   content: '\f054';
   padding-left: 10px;
   font-family: FontAwesome;
-}
-.archive-title {
-  color: #999;
-  font-weight: normal;
-  margin-bottom: 30px;
-  text-shadow: 0 0 1px #fff;
-}
-.archive-title:before {
-  font-family: FontAwesome;
-  content: '\f073';
-  padding-right: 15px;
-}
-.archive-title.tag:before {
-  content: '\f02b';
-}
-.archive-title.category:before {
-  content: '\f07b';
-}
-.archive {
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 50px;
-}
-.archive article {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.archive article .post-content {
-  margin-bottom: 0;
-}
-#footer {
-  color: #999;
-  margin-bottom: 50px;
-  font: 0.9em/1.6 "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
-  text-shadow: 0 0 1px #fff;
-}
-.links {
-  width: 10em;
-  float: left;
 }
 .entry .gist {
   background: #eee;
