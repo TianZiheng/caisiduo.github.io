@@ -834,15 +834,11 @@ else
                 s.message = s.message.replace(/src=(["|'])http:\/\//g, "src=$1//dn-inode.qbox.me/")
             }
             var matched;
-            var subfix = "";
-            if (window.devicePixelRatio != undefined && window.devicePixelRatio >= 1.49) {
-                subfix = "@2x";
+            while(matched=s.message.match(/\#\s*<img[^\>]*?title=\"\[([^\"\[\]]+?)\]\"[^\>]*?class=\"ds\-smiley\"[^\>]*?>/)) {
+                s.message = s.message.replace(matched[0], "<img src=\"https://caisiduo.xyz/img/泡泡/" + matched[1].trim() + ".png\" />");
             }
-            while(matched=s.message.match(/\#\s*<img[^\>]*?title=\"\[\s*(呵呵|啊|鄙视|不高兴|彩虹|星星月亮|太阳|茶杯|大拇指|灯泡|乖|哈哈|汗|黑线|呼|花心|滑稽|惊哭|惊讶|开心|酷|狂汗|泪|冷|礼物|爱心|心碎|玫瑰|勉强|怒|喷|钱|钱币|弱|生气|胜利|睡觉|太开心|吐|吐舌|委屈|笑眼|咦|疑问|阴险|音乐|真棒|haha|OK)\s*\]\"[^\>]*?class=\"ds\-smiley\"[^\>]*?>/)) {
-                s.message = s.message.replace(matched[0], "<img src=\"https://caisiduo.xyz/img/泡泡/" + matched[1].trim() + subfix + ".png\" class=\"biaoqing paopao\" height=30 width=30 no-zoom />");
-            }
-            while(matched=s.message.match(/\#\[\s*(呵呵|啊|鄙视|不高兴|彩虹|星星月亮|太阳|茶杯|大拇指|灯泡|乖|哈哈|汗|黑线|呼|花心|滑稽|惊哭|惊讶|开心|酷|狂汗|泪|冷|礼物|爱心|心碎|玫瑰|勉强|怒|喷|钱|钱币|弱|生气|胜利|睡觉|太开心|吐|吐舌|委屈|笑眼|咦|疑问|阴险|音乐|真棒|haha|OK)\s*\]/)) {
-                s.message = s.message.replace(matched[0], "<img src=\"https://caisiduo.xyz/img/泡泡/" + matched[1] + subfix + ".png\" class=\"biaoqing paopao\" height=30 width=30 no-zoom />");
+            while(matched=s.message.match(/\#\[\s*([^\[\]]+?)\s*\]/)) {
+                s.message = s.message.replace(matched[0], "<img src=\"https://caisiduo.xyz/img/泡泡/" + matched[1] + ".png\" />");
             }
             if (t += '<li class="ds-post" data-post-id="' + s.post_id + '"><div class="ds-post-self" data-post-id="' + s.post_id + '" data-thread-id="' + s.thread_id + '" data-root-id="' + s.root_id + '" data-source="' + s.source + '"><div class="ds-avatar"', r.user_id && (t += ' data-user-id="' + r.user_id + '"'), t += ">" + et.avatar(r), S.sourceName[s.source] && (t += et.serviceIcon(s.source)), t += '</div><div class="ds-comment-body"><div class="ds-comment-header">', r.url ? (t += '<a class="ds-user-name ds-highlight" data-qqt-account="' + (r.qqt_account || "") + '" href="' + u(r.url) + '" ', r.user_id && (t += " onclick=\"this.href='" + a() + "/user-url/?user_id=" + r.user_id + "';\""), t += ' rel="nofollow" target="_blank"', r.user_id && (t += ' data-user-id="' + r.user_id + '"'), t += ">" + u(r.name) + "</a>") : (t += '<span class="ds-user-name"', r.user_id && (t += ' data-user-id="' + r.user_id + '"'), t += ' data-qqt-account="' + (r.qqt_account || "") + '">'+ u(r.name) +"</span>"),
 t += "</div>", 1 == i.max_depth && i.show_context && s.parents.length) {
@@ -932,7 +928,7 @@ t += "</div>", 1 == i.max_depth && i.show_context && s.parents.length) {
              return t += "</span>",
             t += "</div>",
             t += '<button class="ds-post-button" type="submit">' + u(D.post) + '</button><div class="ds-toolbar-buttons">',
-            e.options.use_smilies&&(t+='<a class="ds-toolbar-button ds-add-emote" title="插入表情"></a>'),
+            e.options.use_smilies && (t += '<div class="ywz-wrapper ds-toolbar-buttons" id="ywz-wrapper"><div class="biaoqing_box" id="biaoqing_box"><a title="捂脸">(*/ω＼*)</a><a>（￣▽￣）</a><a>(=・ω・=)</a><a>(｀・ω・&acute;)</a><a>(〜￣△￣)〜</a><a>(･∀･)</a><a>(&deg;∀&deg;)ﾉ</a><a>(￣3￣)</a><a>╮(￣▽￣)╭</a><a>( &acute;_ゝ｀)</a><a>←_←</a><a>→_→</a><a>(&lt;_&lt;)</a><a>(&gt;_&gt;)</a><a>(;&not;_&not;)</a><a>(&quot;▔□▔)/</a><a>(ﾟДﾟ≡ﾟдﾟ)!?</a><a>Σ(ﾟдﾟ;)</a><a>Σ( ￣□￣||)</a><a>(&acute;；ω；`)</a><a>（/TДT)/</a><a>(^・ω・^ )</a><a>(｡･ω･｡)</a><a>(●￣(ｴ)￣●)</a><a>ε=ε=(ノ≧∇≦)ノ</a><a>(&acute;･_･`)</a><a>(-_-#)</a><a>（￣へ￣）</a><a>(￣ε(#￣) Σ</a><a>ヽ(`Д&acute;)ﾉ</a><a>(╯&deg;口&deg;)╯(┴—┴</a><a>（#-_-)┯━┯</a><a>_(:3」∠)_</a><a title="拥吻">(づ￣ ³￣)づ</a><a title="眼泪">ಥ_ಥ</a><a title="猫">龴ↀ◡ↀ龴</a><a title="脸红">(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄</a></div><a class="ywz" id="ymz" target="_blank" style="text-decoration: none;">(・ω・) 颜文字</a></div>'),
             e.options.use_images && e.options.parse_html_enabled && (t += '<a class="ds-toolbar-button ds-add-image" title="插入图片"></a>'),
             t += "</div></div>",
             t += "</form></div>"
@@ -1441,14 +1437,10 @@ t += "</div>", 1 == i.max_depth && i.show_context && s.parents.length) {
                     k = f(b.find("textarea")).focus(p).keyup(n).keyup(d).bind("focus mousedown mouseup keyup", u),
                     w = g.find(".ds-add-emote").click(function(e) {
                         var s = S.smiliesTooltip;
-                        return w.toggleClass("ds-expanded").hasClass("ds-expanded") ? (s || (s = S.smiliesTooltip = new st.SmiliesTooltip, s.render(), DUOSHUO.addSmilies("泡泡",{
-    "#[呵呵]":"呵呵","#[哈哈]":"哈哈","#[吐舌]":"吐舌","#[啊]":"啊","#[酷]":"酷","#[怒]":"怒","#[开心]":"开心","#[汗]":"汗","#[泪]":"泪","#[黑线]":"黑线",
-    "#[鄙视]":"鄙视","#[不高兴]":"不高兴","#[真棒]":"真棒","#[钱]":"钱","#[疑问]":"疑问","#[阴险]":"阴险","#[吐]":"吐","#[咦]":"咦","#[委屈]":"委屈","#[花心]":"花心",
-    "#[呼]":"呼","#[笑眼]":"笑眼","#[冷]":"冷","#[太开心]":"太开心","#[滑稽]":"滑稽","#[勉强]":"勉强","#[狂汗]":"狂汗","#[乖]":"乖","#[睡觉]":"睡觉","#[惊哭]":"惊哭",
-    "#[生气]":"生气","#[惊讶]":"惊讶","#[喷]":"喷","#[爱心]":"爱心","#[心碎]":"心碎","#[玫瑰]":"玫瑰","#[礼物]":"礼物","#[彩虹]":"彩虹","#[星星月亮]":"星星月亮","#[太阳]":"太阳",
-    "#[钱币]":"钱币","#[灯泡]":"灯泡","#[茶杯]":"茶杯","#[音乐]":"音乐","#[haha]":"haha","#[胜利]":"胜利","#[大拇指]":"大拇指","#[弱]":"弱","#[OK]":"OK"
-}),s.reset("泡泡")
-                        ), s.replybox = i, s.el.appendTo(t.body).css({
+                        return w.toggleClass("ds-expanded").hasClass("ds-expanded") ? (s || (s = S.smiliesTooltip = new st.SmiliesTooltip, s.render(), S.require("smilies",
+                        function() {
+                            s.reset("微博-默认")
+                        })), s.replybox = i, s.el.appendTo(t.body).css({
                             top: i.el.offset().top + i.el.outerHeight() + 4 + "px",
                             left: i.el.find(".ds-textarea-wrapper").offset().left + "px"
                         }), H(t.body).click(x)) : x(e),
@@ -1781,15 +1773,9 @@ t += "</div>", 1 == i.max_depth && i.show_context && s.parents.length) {
                  reset: function(e) {
                     function t(t, s) {
                         var i = 0 === e.indexOf("微博") ? "http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/" + s.replace("_org", "_thumb") : S.STATIC_URL + "/images/smilies/" + s;
-                          if (e.indexOf("泡泡") >= 0) {
-                              var subfix = "";
-                              if (window.devicePixelRatio != undefined && window.devicePixelRatio >= 1.49) {
-                                  subfix = "@2x";
-                              }
-                              i = "https://caisiduo.xyz/img/泡泡/" + s + subfix + ".png";
-                          }
                         i = i.replace("http://", "//dn-inode.qbox.me/");
-                        "WordPress" === e && (t = " " + t + " "), a += '<li><img src="' + i + '" title="' + _(t) + '" width=30 height=30 /></li>'
+                        "WordPress" === e && (t = " " + t + " "),
+                        a += '<li><img src="' + i + '" title="' + _(t) + '" /></li>'
                     }
                     var s = this.el.find("ul.ds-smilies-tabs");
                     s.find("a.ds-current").removeClass("ds-current"),
