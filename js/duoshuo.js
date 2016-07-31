@@ -932,8 +932,8 @@ t += "</div>", 1 == i.max_depth && i.show_context && s.parents.length) {
              return t += "</span>",
             t += "</div>",
             t += '<button class="ds-post-button" type="submit">' + u(D.post) + '</button><div class="ds-toolbar-buttons">',
-            e.options.use_smilies && (t += '<a class="ds-toolbar-button ds-add-emote" title="插入表情"></a>'),
             e.options.use_smilies && (t += '<div class="ywz-wrapper" id="ywz-wrapper"><div class="biaoqing_box" id="biaoqing_box"><a title="捂脸">(*/ω＼*)</a><a>（￣▽￣）</a><a>(=・ω・=)</a><a>(｀・ω・&acute;)</a><a>(〜￣△￣)〜</a><a>(･∀･)</a><a>(&deg;∀&deg;)ﾉ</a><a>(￣3￣)</a><a>╮(￣▽￣)╭</a><a>( &acute;_ゝ｀)</a><a>←_←</a><a>→_→</a><a>(&lt;_&lt;)</a><a>(&gt;_&gt;)</a><a>(;&not;_&not;)</a><a>(&quot;▔□▔)/</a><a>(ﾟДﾟ≡ﾟдﾟ)!?</a><a>Σ(ﾟдﾟ;)</a><a>Σ( ￣□￣||)</a><a>(&acute;；ω；`)</a><a>（/TДT)/</a><a>(^・ω・^ )</a><a>(｡･ω･｡)</a><a>(●￣(ｴ)￣●)</a><a>ε=ε=(ノ≧∇≦)ノ</a><a>(&acute;･_･`)</a><a>(-_-#)</a><a>（￣へ￣）</a><a>(￣ε(#￣) Σ</a><a>ヽ(`Д&acute;)ﾉ</a><a>(╯&deg;口&deg;)╯(┴—┴</a><a>（#-_-)┯━┯</a><a>_(:3」∠)_</a><a title="拥吻">(づ￣ ³￣)づ</a><a title="眼泪">ಥ_ಥ</a><a title="猫">龴ↀ◡ↀ龴</a><a title="脸红">(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄</a></div><a class="ywz" id="ymz" target="_blank" style="text-decoration: none;">(・ω・)</a></div>'),
+            e.options.use_smilies && (t += '<a class="ds-toolbar-button ds-add-emote" title="插入表情"></a>'),
             e.options.use_images && e.options.parse_html_enabled && (t += '<a class="ds-toolbar-button ds-add-image" title="插入图片"></a>'),
             t += "</div></div>",
             t += "</form></div>"
