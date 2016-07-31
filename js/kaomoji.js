@@ -46,6 +46,7 @@ $(document).ready(function () {
 		$(this).parent(".biaoqing_box").toggleClass("open");
 		$(this).parent(".biaoqing_box").next("a").toggleClass("open");
 		$(this).parents("form").find("textarea").insertContent($(this).text());
+$("div#biaoqing_box a").attr("target","_blank");
 	});
 	$(".ds-thread").delegate(".ywz","click",function(){
 		$(this).toggleClass("open");
