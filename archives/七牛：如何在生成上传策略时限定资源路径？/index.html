@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>七牛：如何在生成上传策略时限定资源路径？ | 蔡锶铎博客</title>
+  <meta name="author" content="蔡锶铎">
+  
+  <meta name="description" content="某陷入代码黑洞的少年（￣▽￣）">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="七牛：如何在生成上传策略时限定资源路径？"/>
+  <meta property="og:site_name" content="蔡锶铎博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="atom.xml" title="蔡锶铎博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">蔡锶铎博客</a></h1>
+  <h2><a href="/">某陷入代码黑洞的少年（￣▽￣）</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-05-29T09:28:38.000Z"><a href="/archives/七牛：如何在生成上传策略时限定资源路径？/">2016-05-29</a></time>
+      
+      
+  
+    <h1 class="title">七牛：如何在生成上传策略时限定资源路径？</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>七牛通过上传策略实现了客户端直传七牛的黑科技。</p>
+<p>按照官方样例在本地实现之后发觉，这个样例上传到七牛服务器上的资源路径是由客户端决定的。而且不可通过简单设置实现资源路径限定，这样将文件名权限暴露给前端在安全上有一定的问题，所以需要在生成 token 时对资源路径进行限定。</p>
+<a id="more"></a>
+<p>相关部分文档：</p>
+<blockquote>
+<p><strong>scope</strong></p>
+<p>指定上传的目标资源空间（Bucket）和资源名（Key）<br>　<br>有两种格式：</p>
+<ol>
+<li><bucket>，表示允许用户上传文件到指定的 bucket。在这种模式下文件只能“新增”，若已存在同名资源则会失败；</bucket></li>
+<li><bucket>:<key>，表示只允许用户上传指定key的文件。在这种模型下文件默认允许“修改”，已存在同名资源则会本次覆盖。如果希望只能上传指定key的文件，并且不允许修改，那么可以将下面的 insertOnly 属性值设为 1。</key></bucket></li>
+</ol>
+<p><a href="http://developer.qiniu.com/docs/v6/api/reference/security/put-policy.html" target="_blank" rel="external">http://developer.qiniu.com/docs/v6/api/reference/security/put-policy.html</a></p>
+</blockquote>
+<p>在这里我们想要在生成上传策略时就限定资源目录、按照文档说明应该是利用第二种格式。</p>
+<p>于是，遇到坑了。<br>根据获取 token 进行上传时就会遇到 <code>{&quot;error&quot;:&quot;key doesn&#39;t match with scope&quot;}</code> 的报错。</p>
+<p>类似的问题估计其他人肯定也会遇到，于是搜索了下找到下面这个提问：<a href="http://segmentfault.com/q/1010000000593720" target="_blank" rel="external">scope:「bucket」:「key」的覆盖模式能用吗，我这里什么一直报 badtoken</a></p>
+<p>问题下第一条回答解决了问题。</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>七牛即使在生成 token 时限定了资源路径 <code>key</code> 之后，在上传时依旧要传相同的 <code>key</code> 给上传服务器。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>七牛关于限定资源路径这部分的文档中欠缺一些更细节也必要的说明。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5795d2cc227a00f0"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+  
+    <div style="padding:10px 0;margin:20px auto;width:100%;text-align:center"><a id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"><span>Reward</span></a>
+      <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block"><img id="wechat_qr" src="https://caisiduo.xyz/img/微信打赏.png" alt="https://caisiduo.xyz/img/微信打赏.png"/>
+          <p>Wechat reward</p>
+        </div>
+        <div id="alipay" style="display: inline-block"><img id="alipay_qr" src="https://caisiduo.xyz/img/支付宝打赏.png" alt="https://caisiduo.xyz/img/支付宝打赏.png"/>
+          <p>Alipay reward</p>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+  <div id="comment">
+  
+  <!-- 多说评论框 start -->
+   <div class="ds-thread" data-thread-key="archives/七牛：如何在生成上传策略时限定资源路径？/" data-title="七牛：如何在生成上传策略时限定资源路径？" data-url="https://caisiduo.xyz/archives/七牛：如何在生成上传策略时限定资源路径？/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"caisiduo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//caisiduo.xyz/js/duoshuo.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
+  
+  </div>
+
+</div></div>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><p>
+  
+  &copy; 2016 蔡锶铎
+  
+  Theme by <a href="https://caisiduo.xyz" target="_blank">LightOne</a>
+</p>
+<ul>
+    
+      <li class="links">
+        
+          <a href="http://www.anotaku.com" target="_blank" title="AnOtaku">AnOtaku</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://siitake.cn" target="_blank" title="香菇">香菇</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://daphnechang.github.io" target="_blank" title="花花丹">花花丹</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://qqdie.com" target="_blank" title="Jrotty">Jrotty</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://www.wecho.cc" target="_blank" title="SNlone">SNlone</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://techair.cc" target="_blank" title="飞翔的技术宅">飞翔的技术宅</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://hran.me" target="_blank" title="Hran">Hran</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://krag.me" target="_blank" title="KRAG">KRAG</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://www.ihewro.com" target="_blank" title="一日">一日</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://etherking.blog.fc2blog.us" target="_blank" title="彼岸之幻">彼岸之幻</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://www.dreamwings.cn" target="_blank" title="若是凉夜已成梦">若是凉夜已成梦</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://mashirosbaumkuchen.com" target="_blank" title="Little Forest.">Little Forest.</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://xiaochunjie.me" target="_blank" title="小纯洁">小纯洁</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://blog.just666.cn" target="_blank" title="Shawn">Shawn</a>
+        
+      </li>
+    
+</ul>
+<div class="clearfix"></div></footer>
+  <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var targetProtocol = "https:";if (window.location.protocol != targetProtocol) 
+window.location.href = targetProtocol +  
+window.location.href.substring
+(window.location.protocol.length);
+</script>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

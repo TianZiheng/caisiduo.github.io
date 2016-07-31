@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>给Hexo启动https！ | 蔡锶铎博客</title>
+  <meta name="author" content="蔡锶铎">
+  
+  <meta name="description" content="某陷入代码黑洞的少年（￣▽￣）">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="给Hexo启动https！"/>
+  <meta property="og:site_name" content="蔡锶铎博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="atom.xml" title="蔡锶铎博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">蔡锶铎博客</a></h1>
+  <h2><a href="/">某陷入代码黑洞的少年（￣▽￣）</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-06-26T02:19:12.000Z"><a href="/archives/启动HTTPS！/">2016-06-26</a></time>
+      
+      
+  
+    <h1 class="title">给Hexo启动https！</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><img src="https://caisiduo.xyz/img/https.png" alt="https"><br>就在昨天晚上，在获得方法之后的我成功用30分钟的时间搞定了https！<br><a id="more"></a><br>下面开始讲解：</p>
+<h4 id="ssl申请"><a href="#ssl申请" class="headerlink" title="ssl申请"></a>ssl申请</h4><p>申请免费的SSL，注册clouldflare服务商的服务.<br>登陆后将nameserver设置成clouldflare提供的地址</p>
+<h4 id="ssl设置"><a href="#ssl设置" class="headerlink" title="ssl设置"></a>ssl设置</h4><ul>
+<li>cname转向<code>username.github.io</code></li>
+<li>后台顶部的Crypto中，进入Crypto，将SSL选项设置为“<code>Flexible</code>”，这个的意思是访客到cf的过程是加密的，而cf到github pages不是加密的</li>
+<li>将hexo根目录配置文件_config.yml，添加<code>url: https://domain.com</code>与<code>enforce_ssl: https://domain.com</code></li>
+</ul>
+<div class="tip"><br>当你弄完之后发现地址栏的锁头变成灰色的，那你就应该看看你所用<code>JS</code>或<code>CSS</code>的链接是否是<code>https</code>的，可以打开审查元素看出错的地方。把它们一一修改成<code>https</code>链接。<br></div>
+
+
+<p><strong>修改方法一</strong>：查看所用CDN链接有没有<code>https</code>版，如果有，则修改成<code>https</code>的链接<br><strong>修改方法二</strong>：如果没有https版，则把链接中的文件下载到本地，修改其中<code>http</code>→<code>https</code>然后上传到自己的网站。</p>
+<p><del>最后就完成了，至于多说的问题……我只能表示……正在百度……</del></p>
+<blockquote>
+<p><strong>2016/06/26</strong><br>多说问题已经解决，感谢<strong><a href="https://qqdie.com" title="Jrotty" target="_blank" rel="external">@Jrotty</a></strong><br>解决办法：将 <a href="https://github.com/caisiduo/caisiduo.github.io/blob/master/js/duoshuo.js" title="duoshuo.js" target="_blank" rel="external">duoshuo.js</a> 上传到自己的网站，直接引用即可。</p>
+</blockquote>
+<p>再次感谢<strong><a href="https://qqdie.com" title="Jrotty" target="_blank" rel="external">@Jrotty</a></strong>=w=</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5795d2cc227a00f0"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+  
+    <div style="padding:10px 0;margin:20px auto;width:100%;text-align:center"><a id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"><span>Reward</span></a>
+      <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block"><img id="wechat_qr" src="https://caisiduo.xyz/img/微信打赏.png" alt="https://caisiduo.xyz/img/微信打赏.png"/>
+          <p>Wechat reward</p>
+        </div>
+        <div id="alipay" style="display: inline-block"><img id="alipay_qr" src="https://caisiduo.xyz/img/支付宝打赏.png" alt="https://caisiduo.xyz/img/支付宝打赏.png"/>
+          <p>Alipay reward</p>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+  <div id="comment">
+  
+  <!-- 多说评论框 start -->
+   <div class="ds-thread" data-thread-key="archives/启动HTTPS！/" data-title="给Hexo启动https！" data-url="https://caisiduo.xyz/archives/启动HTTPS！/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"caisiduo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//caisiduo.xyz/js/duoshuo.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <!-- 多说公共JS代码 end -->
+  
+  </div>
+
+</div></div>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><p>
+  
+  &copy; 2016 蔡锶铎
+  
+  Theme by <a href="https://caisiduo.xyz" target="_blank">LightOne</a>
+</p>
+<ul>
+    
+      <li class="links">
+        
+          <a href="http://www.anotaku.com" target="_blank" title="AnOtaku">AnOtaku</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://siitake.cn" target="_blank" title="香菇">香菇</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://daphnechang.github.io" target="_blank" title="花花丹">花花丹</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://qqdie.com" target="_blank" title="Jrotty">Jrotty</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://www.wecho.cc" target="_blank" title="SNlone">SNlone</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://techair.cc" target="_blank" title="飞翔的技术宅">飞翔的技术宅</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://hran.me" target="_blank" title="Hran">Hran</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://krag.me" target="_blank" title="KRAG">KRAG</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://www.ihewro.com" target="_blank" title="一日">一日</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://etherking.blog.fc2blog.us" target="_blank" title="彼岸之幻">彼岸之幻</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="https://www.dreamwings.cn" target="_blank" title="若是凉夜已成梦">若是凉夜已成梦</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://mashirosbaumkuchen.com" target="_blank" title="Little Forest.">Little Forest.</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://xiaochunjie.me" target="_blank" title="小纯洁">小纯洁</a>
+        
+      </li>
+    
+      <li class="links">
+        
+          <a href="http://blog.just666.cn" target="_blank" title="Shawn">Shawn</a>
+        
+      </li>
+    
+</ul>
+<div class="clearfix"></div></footer>
+  <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var targetProtocol = "https:";if (window.location.protocol != targetProtocol) 
+window.location.href = targetProtocol +  
+window.location.href.substring
+(window.location.protocol.length);
+</script>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
