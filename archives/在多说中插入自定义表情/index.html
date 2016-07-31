@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>在多说中插入自定义表情 | 蔡锶铎博客</title>
+  <meta name="author" content="蔡锶铎">
+  
+  <meta name="description" content="某陷入代码黑洞的少年（￣▽￣）">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta property="og:title" content="在多说中插入自定义表情"/>
+  <meta property="og:site_name" content="蔡锶铎博客"/>
+
+  <link rel="alternate" href="/atom.xml" title="蔡锶铎博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <header id="header"><div class="title">
+  <h1><a href="/">蔡锶铎博客</a></h1>
+  <p><a href="/">某陷入代码黑洞的少年（￣▽￣）</a></p>
+</div>
+<nav class="nav">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <time datetime="2016-07-19T07:23:04.000Z"><a href="/archives/在多说中插入自定义表情/">2016-07-19</a></time>
+    
+    
+  
+    <h1 class="title">在多说中插入自定义表情</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>很多人对多说的表情不满意，因为这也太丑了！而且对https的支持也不是很好，很多人都想要自定义多说的表情，然而壮士一去不复还，然而咱们的<a href="https://hran.me" title="大好人qwq" target="_blank" rel="external"><strong>大好人</strong>Hran</a>就把 <strong>她</strong> 搞定了0w0。这要对多说js加点特技就可以惹=w=。</p>
+<a id="more"></a>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>首先把多说js下载到本地，接着下载表情包，泡泡表情包下载：<a href="http://pan.baidu.com/s/1skBM6vV" target="_blank" rel="external">泡泡.zip</a>。先把表情包上传到自己的七牛上去。【我这里使用github pages当图床，根据个人情况】</p>
+<p><img src="https://caisiduo.xyz/img/自定义表情-1.png" alt="自定义表情-1"></p>
+<h2 id="开工"><a href="#开工" class="headerlink" title="开工"></a>开工</h2><p>在多说js中搜索 <code>s.message</code> ，在这个if语句的开头，添加如下代码，记得新开一行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> matched;</span><br><span class="line"><span class="keyword">var</span> subfix = <span class="string">""</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.devicePixelRatio != <span class="literal">undefined</span> &amp;&amp; <span class="built_in">window</span>.devicePixelRatio &gt;= <span class="number">1.49</span>) &#123;</span><br><span class="line">    subfix = <span class="string">"@2x"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span>(matched=s.message.match(<span class="regexp">/\#\s*&lt;img[^\&gt;]*?title=\"\[\s*(呵呵|啊|鄙视|不高兴|彩虹|茶杯|大拇指|灯泡|乖|哈哈|汗|黑线|呼|花心|滑稽|惊哭|惊讶|开心|酷|狂汗|泪|冷|礼物|玫瑰|勉强|怒|喷|钱|钱币|弱|生气|胜利|睡觉|太开心|吐|吐舌|委屈|笑眼|咦|疑问|阴险|音乐|真棒|haha)\s*\]\"[^\&gt;]*?class=\"ds\-smiley\"[^\&gt;]*?&gt;/</span>)) &#123;</span><br><span class="line">    s.message = s.message.replace(matched[<span class="number">0</span>], <span class="string">"&lt;img src=\"http://abc.com/paopao/"</span> + matched[<span class="number">1</span>].trim() + subfix + <span class="string">".png\" class=\"biaoqing paopao\" height=32 width=32 no-zoom /&gt;"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span>(matched=s.message.match(<span class="regexp">/\#\[\s*(呵呵|啊|鄙视|不高兴|彩虹|茶杯|大拇指|灯泡|乖|哈哈|汗|黑线|呼|花心|滑稽|惊哭|惊讶|开心|酷|狂汗|泪|冷|礼物|玫瑰|勉强|怒|喷|钱|钱币|弱|生气|胜利|睡觉|太开心|吐|吐舌|委屈|笑眼|咦|疑问|阴险|音乐|真棒|haha)\s*\]/</span>)) &#123;</span><br><span class="line">    s.message = s.message.replace(matched[<span class="number">0</span>], <span class="string">"&lt;img src=\"http://abc.com/paopao/"</span> + matched[<span class="number">1</span>] + subfix + <span class="string">".png\" class=\"biaoqing paopao\" height=32 width=32 no-zoom /&gt;"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>把代码中的图片路径换成你的图片路径，比如你的图片放在abc.com的paopao文件中，就把路径改成 <code>http://abc.com/paopao/</code> 记得加上 <code>http(s)://</code>和最后的 <code>/</code> ，  ，不能加上表情图片的名称。</p>
+<p>把代码中的图片后缀换成你的表情图片后缀，比如你的表情图片是jpg格式的，就把图片后缀改成.jpg，png就改.png。记得加上一个点 <strong>.</strong> 。</p>
+<p>然后加点css~</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span><span class="selector-class">.biaoqing</span>, <span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-comment-body</span> <span class="selector-tag">img</span><span class="selector-class">.biaoqing</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span><span class="selector-class">.paopao</span>, <span class="selector-id">#ds-thread</span> <span class="selector-id">#ds-reset</span> <span class="selector-class">.ds-comment-body</span> <span class="selector-tag">img</span><span class="selector-class">.paopao</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">32px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">32px</span>;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">32px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="https://caisiduo.xyz/img/自定义表情-2.png" alt="自定义表情-2"></p>
+<h2 id="完工"><a href="#完工" class="headerlink" title="完工"></a>完工</h2><p>然后就可以在评论框里面玩玩了！评论 <code>#[图片名称]</code> 即可解析出在评论里解析出图片，在文章底部的评论框试试吧！</p>
+<p>可以试试下面的表情哦~</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">输入</th>
+<th style="text-align:center">预览</th>
+<th style="text-align:center">输入</th>
+<th style="text-align:center">预览</th>
+<th style="text-align:center">输入</th>
+<th style="text-align:center">预览</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>#[乖]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/乖.png" alt="乖"></td>
+<td style="text-align:center"><code>#[开心]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/开心.png" alt="开心"></td>
+<td style="text-align:center"><code>#[喷]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/喷.png" alt="喷"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[哈哈]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/哈哈.png" alt="哈哈"></td>
+<td style="text-align:center"><code>#[酷]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/酷.png" alt="酷"></td>
+<td style="text-align:center"><code>#[钱]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/钱.png" alt="钱"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[汗]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/汗.png" alt="汗"></td>
+<td style="text-align:center"><code>#[狂汗]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/狂汗.png" alt="狂汗"></td>
+<td style="text-align:center"><code>#[太开心]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/太开心.png" alt="太开心"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[黑线]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/黑线.png" alt="黑线"></td>
+<td style="text-align:center"><code>#[泪]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/泪.png" alt="泪"></td>
+<td style="text-align:center"><code>#[睡觉]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/睡觉.png" alt="睡觉"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[呼]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/呼.png" alt="呼"></td>
+<td style="text-align:center"><code>#[冷]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/冷.png" alt="冷"></td>
+<td style="text-align:center"><code>#[生气]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/生气.png" alt="生气"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[花心]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/花心.png" alt="花心"></td>
+<td style="text-align:center"><code>#[笑眼]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/笑眼.png" alt="笑眼"></td>
+<td style="text-align:center"><code>#[胜利]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/胜利.png" alt="胜利"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[滑稽]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/滑稽.png" alt="滑稽"></td>
+<td style="text-align:center"><code>#[吐]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/吐.png" alt="吐"></td>
+<td style="text-align:center"><code>#[弱]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/弱.png" alt="弱"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[惊哭]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/惊哭.png" alt=""></td>
+<td style="text-align:center"><code>#[勉强]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/勉强.png" alt="勉强"></td>
+<td style="text-align:center"><code>#[haha]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/haha.png" alt="haha"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[惊讶]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/惊讶.png" alt="惊讶"></td>
+<td style="text-align:center"><code>#[怒]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/怒.png" alt="怒"></td>
+<td style="text-align:center"><code>#[玫瑰]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/玫瑰.png" alt="玫瑰"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[吐舌]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/吐舌.png" alt="吐舌"></td>
+<td style="text-align:center"><code>#[委屈]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/委屈.png" alt="委屈"></td>
+<td style="text-align:center"><code>#[礼物]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/礼物.png" alt="礼物"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[咦]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/咦.png" alt="咦"></td>
+<td style="text-align:center"><code>#[疑问]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/疑问.png" alt="疑问"></td>
+<td style="text-align:center"><code>#[音乐]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/音乐.png" alt="音乐"></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>#[阴险]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/阴险.png" alt="阴险"></td>
+<td style="text-align:center"><code>#[真棒]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/真棒.png" alt="真棒"></td>
+<td style="text-align:center"><code>#[钱币]</code></td>
+<td style="text-align:center"><img src="https://caisiduo.xyz/img/泡泡/钱币.png" alt="钱币"></td>
+</tr>
+</tbody>
+</table>
+<p>如果需要修改表情框，参考：<a href="https://caisiduo.xyz/archives/把多说表情框内的表情换成自己的表情/">《把多说表情框内的表情换成自己的表情》</a></p>
+
+    
+  </div>
+  <footer>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+  
+    <div style="padding:10px 0;margin:20px auto;width:100%;text-align:center"><a id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"><span>rewardbutton</span></a>
+      <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block"><img id="wechat_qr" src="https://caisiduo.xyz/img/微信打赏.png" alt="https://caisiduo.xyz/img/微信打赏.png"/>
+          <p>wechat_reward</p>
+        </div>
+        <div id="alipay" style="display: inline-block"><img id="alipay_qr" src="https://caisiduo.xyz/img/支付宝打赏.png" alt="https://caisiduo.xyz/img/支付宝打赏.png"/>
+          <p>alipay_reward</p>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+  <div id="comment">
+  
+  <!-- 多说评论框 start -->
+   <div class="ds-thread" data-thread-key="archives/在多说中插入自定义表情/" data-title="在多说中插入自定义表情" data-url="https://caisiduo.xyz/archives/在多说中插入自定义表情/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"caisiduo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//caisiduo.xyz/js/duoshuo.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <script type="text/javascript" src="/js/kaomoji.js"></script>
+  <!-- 多说公共JS代码 end -->
+  
+  </div>
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget recent-posts first">
+  <h3 class="title">recent_posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/archives/MarkDown快速入门/">MarkDown快速入门</a>
+      </li>
+    
+      <li>
+        <a href="/archives/把多说表情框内的表情换成自己的表情/">把多说表情框内的表情换成自己的表情</a>
+      </li>
+    
+      <li>
+        <a href="/archives/Hexo主题：LightOne/">Hexo主题：LightOne</a>
+      </li>
+    
+      <li>
+        <a href="/archives/想不到要更新什么！/">想不到要更新什么！</a>
+      </li>
+    
+      <li>
+        <a href="/archives/Node开发常见问题和基础工具/">Node 开发常见问题和基础工具</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+      
+      
+    
+      
+      <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2016 <a href="/">蔡锶铎</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  
+</body>
+</html>

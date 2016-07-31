@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>隐藏“站长统计”文字链接 | 蔡锶铎博客</title>
+  <meta name="author" content="蔡锶铎">
+  
+  <meta name="description" content="某陷入代码黑洞的少年（￣▽￣）">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta property="og:title" content="隐藏“站长统计”文字链接"/>
+  <meta property="og:site_name" content="蔡锶铎博客"/>
+
+  <link rel="alternate" href="/atom.xml" title="蔡锶铎博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <header id="header"><div class="title">
+  <h1><a href="/">蔡锶铎博客</a></h1>
+  <p><a href="/">某陷入代码黑洞的少年（￣▽￣）</a></p>
+</div>
+<nav class="nav">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <time datetime="2016-06-23T09:03:05.000Z"><a href="/archives/隐藏“站长统计”文字链接/">2016-06-23</a></time>
+    
+    
+  
+    <h1 class="title">隐藏“站长统计”文字链接</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>站长统计没有自带隐藏前台“站长统计”文字的功能，这2字在我们页面中时而多余时而碍眼，所以90%以上的用户都会想办法去除或隐藏“站长统计”四个字。<br><a id="more"></a></p>
+<p>最常见的是把统计代码放在一个DIV中，然后填写class再用样式块隐藏，还有比较常见的就是直接给div写内嵌样式隐藏整个div然后把统计代码放入div中。如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display:none"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://s5.cnzz.com/stat.php?id=统计ID&amp;web_id=统计ID"</span> <span class="attr">language</span>=<span class="string">"JavaScript"</span>&gt;</span><span class="undefined"></span><br><span class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div class="tip"><br>众所周知，使用<code>display:none</code>对搜索引擎来说是不友好的，所以避之为吉，能避免使用就避免使用，因为对于搜索引擎来说可以隐藏有作弊嫌疑。<br></div>
+
+<p>获取到的默认JS</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cnzz_protocol = ((<span class="string">"https:"</span> == <span class="built_in">document</span>.location.protocol) ? <span class="string">" https://"</span> : <span class="string">" http://"</span>);</span><br><span class="line"><span class="built_in">document</span>.write(<span class="built_in">unescape</span>(<span class="string">"%3Cspan id='cnzz_stat_icon_统计ID'%3E%3C/span%3E%3Cscript src='"</span> + cnzz_protocol + <span class="string">"s5.cnzz.com/stat.php%3Fid%3D统计ID' type='text/javascript'%3E%3C/script%3E"</span>));</span><br></pre></td></tr></table></figure>
+<p>在获取统计代码是我们选择默认代码而不是精简代码</p>
+<p>修改后的默认JS</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cnzz_protocol = ((<span class="string">"https:"</span> == <span class="built_in">document</span>.location.protocol) ? <span class="string">" https://"</span> : <span class="string">" http://"</span>);</span><br><span class="line"><span class="built_in">document</span>.write(<span class="built_in">unescape</span>(<span class="string">"%3Cspan style='display:none;' id='cnzz_stat_icon_统计ID'%3E%3C/span%3E%3Cscript src='"</span> + cnzz_protocol + <span class="string">"s5.cnzz.com/stat.php%3Fid%3D统计ID' type='text/javascript'%3E%3C/script%3E"</span>));</span><br></pre></td></tr></table></figure>
+<p>在<code>document.write(unescape(&quot;%3Cspan</code>与<code>id=&#39;cnzz_stat_icon_</code>之间增加<code>style=&#39;display:none;&#39;</code></p>
+<p>或者是直接复制这里修改过的默认代码然后修改ID为你网站的统计ID，有2处要修改，分别是<code>id=&#39;cnzz_stat_icon_统计ID&#39;</code>和<code>stat.php%3Fid%3D统计ID</code>，把<code>统计ID</code>修改成你网站的<code>统计id</code>就可以了。</p>
+<p>增加一段js隐藏站长统计文字链接</p>
+<p>在获取的统计代码最后，也就是<code>&lt;/script&gt;</code>前面，加一段：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"cnzz_stat_icon_统计ID"</span>).style.display = <span class="string">"none"</span>;</span><br></pre></td></tr></table></figure></p>
+<div class="tip"><br>在保存前记得修改站点统计ID，将<code>统计ID</code>修改为你的站长统计网站<code>统计ID</code>即可，不知子曰开始是用这种方法，现在用前面介绍的那种，相比前者比后者更好。<br></div>
+
+    
+  </div>
+  <footer>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+  
+    <div style="padding:10px 0;margin:20px auto;width:100%;text-align:center"><a id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"><span>rewardbutton</span></a>
+      <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block"><img id="wechat_qr" src="https://caisiduo.xyz/img/微信打赏.png" alt="https://caisiduo.xyz/img/微信打赏.png"/>
+          <p>wechat_reward</p>
+        </div>
+        <div id="alipay" style="display: inline-block"><img id="alipay_qr" src="https://caisiduo.xyz/img/支付宝打赏.png" alt="https://caisiduo.xyz/img/支付宝打赏.png"/>
+          <p>alipay_reward</p>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+  <div id="comment">
+  
+  <!-- 多说评论框 start -->
+   <div class="ds-thread" data-thread-key="archives/隐藏“站长统计”文字链接/" data-title="隐藏“站长统计”文字链接" data-url="https://caisiduo.xyz/archives/隐藏“站长统计”文字链接/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"caisiduo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//caisiduo.xyz/js/duoshuo.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <script type="text/javascript" src="/js/kaomoji.js"></script>
+  <!-- 多说公共JS代码 end -->
+  
+  </div>
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget recent-posts first">
+  <h3 class="title">recent_posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/archives/MarkDown快速入门/">MarkDown快速入门</a>
+      </li>
+    
+      <li>
+        <a href="/archives/把多说表情框内的表情换成自己的表情/">把多说表情框内的表情换成自己的表情</a>
+      </li>
+    
+      <li>
+        <a href="/archives/Hexo主题：LightOne/">Hexo主题：LightOne</a>
+      </li>
+    
+      <li>
+        <a href="/archives/想不到要更新什么！/">想不到要更新什么！</a>
+      </li>
+    
+      <li>
+        <a href="/archives/Node开发常见问题和基础工具/">Node 开发常见问题和基础工具</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+      
+      
+    
+      
+      <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2016 <a href="/">蔡锶铎</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  
+</body>
+</html>

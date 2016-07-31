@@ -71,14 +71,17 @@ strong {
 #header {
   -webkit-border-radius: 8px 8px 0 0;
   border-radius: 8px 8px 0 0;
-  background: #c6eafa -webkit-linear-gradient(#ddfbfc, #c6eafa);
-  background: #c6eafa -moz-linear-gradient(#ddfbfc, #c6eafa);
-  background: #c6eafa -o-linear-gradient(#ddfbfc, #c6eafa);
-  background: #c6eafa -ms-linear-gradient(#ddfbfc, #c6eafa);
-  background: #c6eafa linear-gradient(#ddfbfc, #c6eafa);
+  background: #4fc08d -webkit-linear-gradient(#3aa373, #4fc08d);
+  background: #4fc08d -moz-linear-gradient(#3aa373, #4fc08d);
+  background: #4fc08d -o-linear-gradient(#3aa373, #4fc08d);
+  background: #4fc08d -ms-linear-gradient(#3aa373, #4fc08d);
+  background: #4fc08d linear-gradient(#3aa373, #4fc08d);
   position: relative;
   padding: 15px 30px;
   border-bottom: 1px solid #b2d2e1;
+}
+#header a {
+  color: #fff;
 }
 #header .title {
   float: left;
@@ -101,7 +104,7 @@ strong {
   font-size: 24px;
   font-weight: normal;
   line-height: 1.2;
-  color: #069;
+  color: #fff;
   text-shadow: rgba(255,255,255,0.9) 0 1px 0;
 }
 #header.without-description h1 {
@@ -109,7 +112,7 @@ strong {
 }
 #header p {
   margin: 0;
-  color: #61778b;
+  color: #fff;
   width: 300px;
   font-size: 13px;
   font-style: italic;
@@ -458,6 +461,48 @@ article footer .tags:before {
   content: '\f02b';
   top: 5px;
   left: 2px;
+}
+#rewardButton {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0;
+  letter-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+}
+#rewardButton span {
+  display: inline-block;
+  padding: 4px 12px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border-bottom: 4px solid #3aa373;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  font-stretch: normal;
+  font-size: 14px;
+  background: #4fc08d;
+}
+#rewardButton spanhover {
+  background: #22bd77;
+}
+#QR {
+  padding-top: 20px;
+}
+#QR a {
+  border: 0;
+}
+#QR img {
+  width: 180px;
+  max-width: 100%;
+  display: inline-block;
+  margin: 0.8em 2em 0 2em;
 }
 #comment {
   padding: 0 20px 20px;

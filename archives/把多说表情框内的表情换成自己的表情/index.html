@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>把多说表情框内的表情换成自己的表情 | 蔡锶铎博客</title>
+  <meta name="author" content="蔡锶铎">
+  
+  <meta name="description" content="某陷入代码黑洞的少年（￣▽￣）">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta property="og:title" content="把多说表情框内的表情换成自己的表情"/>
+  <meta property="og:site_name" content="蔡锶铎博客"/>
+
+  <link rel="alternate" href="/atom.xml" title="蔡锶铎博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <header id="header"><div class="title">
+  <h1><a href="/">蔡锶铎博客</a></h1>
+  <p><a href="/">某陷入代码黑洞的少年（￣▽￣）</a></p>
+</div>
+<nav class="nav">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <time datetime="2016-07-29T11:45:57.050Z"><a href="/archives/把多说表情框内的表情换成自己的表情/">2016-07-29</a></time>
+    
+    
+  
+    <h1 class="title">把多说表情框内的表情换成自己的表情</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>PS：本篇文章涉及<a href="https://caisiduo.xyz/archives/在多说中插入自定义表情/">《在多说中插入自定义表情》</a>的内容，请先阅读。</p>
+<p>多说表情框里的很多表情都渣的一比，这里引用<a href="http://www.ihewro.com" target="_blank" rel="external">一日</a>的话：“完全不懂多说官方为什么要把那么多不好看表情堆在一起==。”</p>
+<p>这篇教程主要讲解修改多说评论框，代码略多。</p>
+<p>原理：修改多说表情框的表情和点击表情后出现的文字，而上篇教程的原理就是将指定文字转换为表情。如：<code>#[滑稽]</code>转换为<code>&lt;img src=&quot;http://abc.com/paopao/滑稽.png&quot;&gt;</code>。</p>
+<a id="more"></a>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol>
+<li>多说JS</li>
+<li>表情包</li>
+</ol>
+<p>PS：本教程使用的表情包：<a href="http://pan.baidu.com/s/1skBM6vV" target="_blank" rel="external">泡泡.zip</a>。</p>
+<h2 id="开工"><a href="#开工" class="headerlink" title="开工"></a>开工</h2><p><strong> 1： </strong></p>
+<p>搜索<code>return w.toggleClass(&quot;ds-expanded&quot;).hasClass(&quot;ds-expanded&quot;)</code>，同一行：</p>
+<p>在<code>s.render(),</code>和<code>S.require(&quot;smilies&quot;, function() {</code>的中间加上：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DUOSHUO.addSmilies(<span class="string">"泡泡"</span>,&#123;</span><br><span class="line">    <span class="string">"#[呵呵]"</span>:<span class="string">"呵呵"</span>,<span class="string">"#[哈哈]"</span>:<span class="string">"哈哈"</span>,<span class="string">"#[吐舌]"</span>:<span class="string">"吐舌"</span>,<span class="string">"#[啊]"</span>:<span class="string">"啊"</span>,<span class="string">"#[酷]"</span>:<span class="string">"酷"</span>,<span class="string">"#[怒]"</span>:<span class="string">"怒"</span>,<span class="string">"#[开心]"</span>:<span class="string">"开心"</span>,<span class="string">"#[汗]"</span>:<span class="string">"汗"</span>,<span class="string">"#[泪]"</span>:<span class="string">"泪"</span>,<span class="string">"#[黑线]"</span>:<span class="string">"黑线"</span>,</span><br><span class="line">    <span class="string">"#[鄙视]"</span>:<span class="string">"鄙视"</span>,<span class="string">"#[不高兴]"</span>:<span class="string">"不高兴"</span>,<span class="string">"#[真棒]"</span>:<span class="string">"真棒"</span>,<span class="string">"#[钱]"</span>:<span class="string">"钱"</span>,<span class="string">"#[疑问]"</span>:<span class="string">"疑问"</span>,<span class="string">"#[阴险]"</span>:<span class="string">"阴险"</span>,<span class="string">"#[吐]"</span>:<span class="string">"吐"</span>,<span class="string">"#[咦]"</span>:<span class="string">"咦"</span>,<span class="string">"#[委屈]"</span>:<span class="string">"委屈"</span>,<span class="string">"#[花心]"</span>:<span class="string">"花心"</span>,</span><br><span class="line">    <span class="string">"#[呼]"</span>:<span class="string">"呼"</span>,<span class="string">"#[笑眼]"</span>:<span class="string">"笑眼"</span>,<span class="string">"#[冷]"</span>:<span class="string">"冷"</span>,<span class="string">"#[太开心]"</span>:<span class="string">"太开心"</span>,<span class="string">"#[滑稽]"</span>:<span class="string">"滑稽"</span>,<span class="string">"#[勉强]"</span>:<span class="string">"勉强"</span>,<span class="string">"#[狂汗]"</span>:<span class="string">"狂汗"</span>,<span class="string">"#[乖]"</span>:<span class="string">"乖"</span>,<span class="string">"#[睡觉]"</span>:<span class="string">"睡觉"</span>,<span class="string">"#[惊哭]"</span>:<span class="string">"惊哭"</span>,</span><br><span class="line">    <span class="string">"#[生气]"</span>:<span class="string">"生气"</span>,<span class="string">"#[惊讶]"</span>:<span class="string">"惊讶"</span>,<span class="string">"#[喷]"</span>:<span class="string">"喷"</span>,<span class="string">"#[玫瑰]"</span>:<span class="string">"玫瑰"</span>,<span class="string">"#[礼物]"</span>:<span class="string">"礼物"</span>,<span class="string">"#[彩虹]"</span>:<span class="string">"彩虹"</span>,</span><br><span class="line">    <span class="string">"#[钱币]"</span>:<span class="string">"钱币"</span>,<span class="string">"#[灯泡]"</span>:<span class="string">"灯泡"</span>,<span class="string">"#[茶杯]"</span>:<span class="string">"茶杯"</span>,<span class="string">"#[音乐]"</span>:<span class="string">"音乐"</span>,<span class="string">"#[haha]"</span>:<span class="string">"haha"</span>,<span class="string">"#[胜利]"</span>:<span class="string">"胜利"</span>,<span class="string">"#[大拇指]"</span>:<span class="string">"大拇指"</span>,<span class="string">"#[弱]"</span>:<span class="string">"弱"</span></span><br><span class="line">&#125;),</span><br></pre></td></tr></table></figure>
+<p>将<code>S.require(&quot;smilies&quot;, function() {</code>中的<code>s.reset(&quot;微博-默认&quot;)</code>更改为：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.reset(<span class="string">"泡泡"</span>)</span><br></pre></td></tr></table></figure>
+<p><strong> 2： </strong></p>
+<p>搜索<code>http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/</code>，在这行附近</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">0</span> === e.indexOf(<span class="string">"微博"</span>) ?..................</span><br><span class="line"><span class="comment">// 添加下面的内容</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="number">0</span> === e.indexOf(<span class="string">"泡泡"</span>)) &#123;</span><br><span class="line">    <span class="keyword">var</span> subfix = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">window</span>.devicePixelRatio != <span class="literal">undefined</span> &amp;&amp; <span class="built_in">window</span>.devicePixelRatio &gt;= <span class="number">1.49</span>) &#123;</span><br><span class="line">        subfix = <span class="string">"@2x"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    i = <span class="string">"http://abc.com/paopao/"</span> + s + subfix + <span class="string">".png"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加上面的内容</span></span><br><span class="line"><span class="string">"WordPress"</span> === e &amp;&amp; (t = <span class="string">" "</span> + t + <span class="string">" "</span>), a += <span class="string">'&lt;li&gt;&lt;img src="'</span> + i + <span class="string">'" title="'</span> + _(t) + <span class="string">'" /&gt;&lt;/li&gt;'</span></span><br><span class="line"><span class="comment">//上面一行修改为：（添加了 width=22 height=22 ）</span></span><br><span class="line"><span class="string">"WordPress"</span> === e &amp;&amp; (t = <span class="string">" "</span> + t + <span class="string">" "</span>), a += <span class="string">'&lt;li&gt;&lt;img src="'</span> + i + <span class="string">'" title="'</span> + _(t) + <span class="string">'" width=22 height=22 /&gt;&lt;/li&gt;'</span></span><br></pre></td></tr></table></figure>
+<p>记得修改链接。</p>
+<h3 id="如果需要去除自带的其他表情或侧边栏。"><a href="#如果需要去除自带的其他表情或侧边栏。" class="headerlink" title="如果需要去除自带的其他表情或侧边栏。"></a>如果需要去除自带的其他表情或侧边栏。</h3><p><strong> 1： </strong></p>
+<p>上面的第一步中：</p>
+<p>将：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">S.require(<span class="string">"smilies"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    s.reset(<span class="string">"泡泡"</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>替换为：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.reset(<span class="string">"泡泡"</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>一定要注意括号的数量</strong></p>
+<p><strong> 2： </strong></p>
+<p>将上面第二步中的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"WordPress"</span> === e &amp;&amp; (t = <span class="string">" "</span> + t + <span class="string">" "</span>), a += <span class="string">'&lt;li&gt;&lt;img src="'</span> + i + <span class="string">'" title="'</span> + _(t) + <span class="string">'" width=22 height=22 /&gt;&lt;/li&gt;'</span></span><br></pre></td></tr></table></figure>
+<p>修改为(尺寸修改为32*32)：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"WordPress"</span> === e &amp;&amp; (t = <span class="string">" "</span> + t + <span class="string">" "</span>), a += <span class="string">'&lt;li&gt;&lt;img src="'</span> + i + <span class="string">'" title="'</span> + _(t) + <span class="string">'" width=32 height=32 /&gt;&lt;/li&gt;'</span></span><br></pre></td></tr></table></figure>
+<p><strong> 3： </strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#ds-smilies-tooltip</span> <span class="selector-tag">ul</span><span class="selector-class">.ds-smilies-tabs</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#ds-smilies-tooltip</span> <span class="selector-class">.ds-smilies-container</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#ds-smilies-tooltip</span> <span class="selector-class">.ds-smilies-container</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">40px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意一定要修改图片链接！</p>
+</blockquote>
+<h2 id="完工"><a href="#完工" class="headerlink" title="完工"></a>完工</h2><p>欢迎在下面评论进行测试。</p>
+
+    
+  </div>
+  <footer>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+  
+    <div style="padding:10px 0;margin:20px auto;width:100%;text-align:center"><a id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"><span>rewardbutton</span></a>
+      <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block"><img id="wechat_qr" src="https://caisiduo.xyz/img/微信打赏.png" alt="https://caisiduo.xyz/img/微信打赏.png"/>
+          <p>wechat_reward</p>
+        </div>
+        <div id="alipay" style="display: inline-block"><img id="alipay_qr" src="https://caisiduo.xyz/img/支付宝打赏.png" alt="https://caisiduo.xyz/img/支付宝打赏.png"/>
+          <p>alipay_reward</p>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+  <div id="comment">
+  
+  <!-- 多说评论框 start -->
+   <div class="ds-thread" data-thread-key="archives/把多说表情框内的表情换成自己的表情/" data-title="把多说表情框内的表情换成自己的表情" data-url="https://caisiduo.xyz/archives/把多说表情框内的表情换成自己的表情/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"caisiduo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//caisiduo.xyz/js/duoshuo.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <script type="text/javascript" src="/js/kaomoji.js"></script>
+  <!-- 多说公共JS代码 end -->
+  
+  </div>
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget recent-posts first">
+  <h3 class="title">recent_posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/archives/MarkDown快速入门/">MarkDown快速入门</a>
+      </li>
+    
+      <li>
+        <a href="/archives/把多说表情框内的表情换成自己的表情/">把多说表情框内的表情换成自己的表情</a>
+      </li>
+    
+      <li>
+        <a href="/archives/Hexo主题：LightOne/">Hexo主题：LightOne</a>
+      </li>
+    
+      <li>
+        <a href="/archives/想不到要更新什么！/">想不到要更新什么！</a>
+      </li>
+    
+      <li>
+        <a href="/archives/Node开发常见问题和基础工具/">Node 开发常见问题和基础工具</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+      
+      
+    
+      
+      <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2016 <a href="/">蔡锶铎</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  
+</body>
+</html>

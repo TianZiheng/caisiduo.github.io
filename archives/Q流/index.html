@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>Q流 | 蔡锶铎博客</title>
+  <meta name="author" content="蔡锶铎">
+  
+  <meta name="description" content="某陷入代码黑洞的少年（￣▽￣）">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta property="og:title" content="Q流"/>
+  <meta property="og:site_name" content="蔡锶铎博客"/>
+
+  <link rel="alternate" href="/atom.xml" title="蔡锶铎博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <header id="header"><div class="title">
+  <h1><a href="/">蔡锶铎博客</a></h1>
+  <p><a href="/">某陷入代码黑洞的少年（￣▽￣）</a></p>
+</div>
+<nav class="nav">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <time datetime="2016-05-29T09:29:58.000Z"><a href="/archives/Q流/">2016-05-29</a></time>
+    
+    
+  
+    <h1 class="title">Q流</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>　Q.js 是一个炒鸡轻量的前端单页路由框架。</p>
+<blockquote>
+<p>轻量、快速、极简</p>
+</blockquote>
+<p>　为了更好的利用缓存以及更少的后端支援，Q.js放弃了 HTML5 State，通过#!格式的 url hach 重现了 url 路由功能。</p>
+<ol>
+<li>无 JavaScript 库依托，可随意搭配使用</li>
+<li>源代码不及百行压缩后 <code>834byte</code></li>
+<li>支持 IE6+ Chrome Safari FF</li>
+<li>未做情况判定，使用 Q.js 必然会注册 <code>window.Q</code></li>
+</ol>
+<a id="more"></a>
+<h2 id="缓存机制"><a href="#缓存机制" class="headerlink" title="缓存机制"></a>缓存机制</h2><h3 id="JavaScript-线程"><a href="#JavaScript-线程" class="headerlink" title="JavaScript 线程"></a>JavaScript 线程</h3><p>在发起请求前，首先会在当前的 JavaScript 环境下查找，是否有访问过请求的地址。如果已经访问过那么会直接在当前线程调用回调函数。</p>
+<p>这时候所用的时间接近于立刻。</p>
+<h3 id="HTTP-缓存"><a href="#HTTP-缓存" class="headerlink" title="HTTP 缓存"></a>HTTP 缓存</h3><p>如果当前请求没有在 JavaScript 里记录的话，那么就会通过 XHR 发起 HTTP 请求。这部分开始是需要服务器端进行配合才有效果。<br>如果遇到本地浏览器加载过的资源，那么在下次加载时会提交更新时间给后端 HTTP 服务，服务器端对比更新时间、如果内容在这段时间没有发生改变那么会返回 HTTP 状态码 304 通知浏览器调用本地缓存数据。</p>
+<p>这时候所耗时间在 HTTP 请求上。</p>
+<p>服务器缓存</p>
+<p>如果文件已经更新或从未请求过，那么就需要服务器发送一份新的给服务器端。对于访问量较大的相同数据 我们可以在服务端通过Memcache/radis/文件的形式对其进行缓存。如果集中缓存那么就把服务器缓存的数据返回给 HTTP 请求。</p>
+<p>这段时间所耗时间在 HTTP 请求和读取服务器缓存上。</p>
+<p>SQL请求</p>
+<p>如果没有或者没有击中服务器缓存的情况，我们就要从 SQL 里面获取一份最新数据。这最后一步要尽可能避免，在复杂的SQL语句情况下所耗时间不可预计。<br>在SQL返回数据时，我们将返回的数据缓存到服务器缓存中，来应对之后访问这条数据的情况。</p>
+<p>这段时间所消耗的时间在 HTTP 请求和 SQL 请求，以及对数据的预处理上。</p>
+<blockquote>
+<p>在通常的文档流情况下 使用iTorrJS的ajax请求 缓存优势并不明显。</p>
+</blockquote>
+<p>$.j $.l 优化外联 CSS 与 外联JavaScript 以及JSON-P</p>
+<h2 id="Q-js-amp-iTorrJS文档流-和-通常的文档流-对比"><a href="#Q-js-amp-iTorrJS文档流-和-通常的文档流-对比" class="headerlink" title="Q.js&amp;iTorrJS文档流 和 通常的文档流 对比"></a>Q.js&amp;iTorrJS文档流 和 通常的文档流 对比</h2><blockquote>
+<p>Q.jS&amp;iTorr文档流简称“Q流”，通常文档流简称“通常流”</p>
+</blockquote>
+<p>既然是对比就要首先 统一起点 简化流程，每一条目只对比一点。</p>
+<h3 id="加载过程对比"><a href="#加载过程对比" class="headerlink" title="加载过程对比"></a>加载过程对比</h3><p>我们先忽略其他数据，只对比加载过程。我选了三个有代表性的时段。</p>
+<h4 id="初次加载过程对比"><a href="#初次加载过程对比" class="headerlink" title="初次加载过程对比"></a>初次加载过程对比</h4><p>在初次加过过程中，Q流总数据量比通常流要少、但因为把原本杂糅在一起的 HTML 分离成了 HTML模板 和 JSON格式数据 在总时长上要比通常流久一点。</p>
+<p>初次加载过程中，Q流总时长并无优势。</p>
+<p>但加载是一个过程，Q流在初次加载过程中开始显示内容的时机要比通常流早很多，可以在加载完HTML模板时开始显示内容。而通常流则必须在加载完HTML后等待CSS和JS加载运行完（不包括images）才开始显示内容。在加载过程的感官上，Q流反倒更快速友好。</p>
+<h4 id="跳页过程对比（初次访问）"><a href="#跳页过程对比（初次访问）" class="headerlink" title="跳页过程对比（初次访问）"></a>跳页过程对比（初次访问）</h4><p>对比完初次加载我们再看看从当前页跳转到另一页时的情况。<br>通常流依旧需要通过服务器拼合请求数据 和模板拼合然后返回数据给浏览器。和初次加载的区别在于外联 JavaScript 和 CSS 服务器会返回302 通知浏览器调用上次的缓存。会比初次加载略快，但HTML加载过程中的白屏依旧不可避。</p>
+<p>Q流这时不太一样咯~ JavaScript和CSS的加载过程消失了！仅剩下取数据的JSON，因为纯数据和不需要服务器预处理以及拼模板，会节省HTTP和服务器开销、在总时间上快于通常流。并且没有白屏过程！这时候JavaScript依旧可以做各种各样的事情。</p>
+<p>其实不止如此，对于很大几率被访问的页面、我们可以在首次加载完成之后，找空闲时间提前预载可能需要的数据。这样加载过程就会变成下图这样</p>
+<h5 id="跳页过程对比（非初次访问）"><a href="#跳页过程对比（非初次访问）" class="headerlink" title="跳页过程对比（非初次访问）"></a>跳页过程对比（非初次访问）</h5><p>在访问打开过的页面时，结果又完全不一样了。Q流的加载过程变成了不及2ms OAQ<br>通常流这时因为调用的是php文件，缓存机制无法工作 和初次访问的结果是一样的、HTML又重新算了一遍…</p>
+<p>回到缓存那一段的结尾</p>
+<blockquote>
+<p>在通常的文档流情况下 使用iTorrJS的ajax请求 缓存优势并不明显。</p>
+</blockquote>
+<p> Q流的优势是在 Q.js 的单页路由和 iTorr.js 的缓存机制一起应用时才能体现的。单页让请求访问 第一层 JavaScript 缓存的情况越多，Q流的优势就越明显。<br> 但其实优势远不止这些~</p>
+
+    
+  </div>
+  <footer>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+  
+    <div style="padding:10px 0;margin:20px auto;width:100%;text-align:center"><a id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}"><span>rewardbutton</span></a>
+      <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block"><img id="wechat_qr" src="https://caisiduo.xyz/img/微信打赏.png" alt="https://caisiduo.xyz/img/微信打赏.png"/>
+          <p>wechat_reward</p>
+        </div>
+        <div id="alipay" style="display: inline-block"><img id="alipay_qr" src="https://caisiduo.xyz/img/支付宝打赏.png" alt="https://caisiduo.xyz/img/支付宝打赏.png"/>
+          <p>alipay_reward</p>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+  <div id="comment">
+  
+  <!-- 多说评论框 start -->
+   <div class="ds-thread" data-thread-key="archives/Q流/" data-title="Q流" data-url="https://caisiduo.xyz/archives/Q流/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"caisiduo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//caisiduo.xyz/js/duoshuo.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+  <script type="text/javascript" src="/js/kaomoji.js"></script>
+  <!-- 多说公共JS代码 end -->
+  
+  </div>
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget recent-posts first">
+  <h3 class="title">recent_posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/archives/MarkDown快速入门/">MarkDown快速入门</a>
+      </li>
+    
+      <li>
+        <a href="/archives/把多说表情框内的表情换成自己的表情/">把多说表情框内的表情换成自己的表情</a>
+      </li>
+    
+      <li>
+        <a href="/archives/Hexo主题：LightOne/">Hexo主题：LightOne</a>
+      </li>
+    
+      <li>
+        <a href="/archives/想不到要更新什么！/">想不到要更新什么！</a>
+      </li>
+    
+      <li>
+        <a href="/archives/Node开发常见问题和基础工具/">Node 开发常见问题和基础工具</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+      
+      
+    
+      
+      <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2016 <a href="/">蔡锶铎</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  
+</body>
+</html>
