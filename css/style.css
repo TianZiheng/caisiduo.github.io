@@ -609,9 +609,6 @@ article footer .tags:before {
     margin-left: 0;
   }
 }
-#sidebar .widget.first {
-  margin-left: 0;
-}
 #sidebar .widget.newline {
   clear: both;
 }
@@ -715,9 +712,7 @@ figure.highlight td {
   border-bottom: 0;
 }
 figure.highlight .gutter pre {
-  padding: 0 0 0 10px;
-  border-right: 1px solid #fff;
-  height: 100%;
+  display: none;
 }
 pre .comment,
 pre .template_comment,
