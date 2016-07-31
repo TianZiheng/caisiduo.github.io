@@ -68,7 +68,7 @@ a:hover {
   clear: both;
 }
 .inner {
-  width: 900px;
+  width: 680px;
   margin: 0 auto;
 }
 @media screen and (max-width: 1260px) {
