@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://caisiduo.xyz/"/>
-  <updated>2016-07-31T03:15:52.000Z</updated>
+  <updated>2016-08-03T06:43:06.000Z</updated>
   <id>https://caisiduo.xyz/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>D-img</title>
+    <link href="https://caisiduo.xyz/archives/D-img/"/>
+    <id>https://caisiduo.xyz/archives/D-img/</id>
+    <published>2016-08-03T06:42:10.000Z</published>
+    <updated>2016-08-03T06:43:06.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;说明：简到不能再简的图床工具。只有 &lt;strong&gt;1&lt;/strong&gt; 个文件，代码压缩到 &lt;strong&gt;1&lt;/strong&gt; 行，大小 &lt;strong&gt;1&lt;/strong&gt; kb。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天逛博客的时候发现了香菇用的图片链接是之前卜卜口做的偷揉图床的链接。&lt;/p&gt;
+&lt;p&gt;之前也用过一次。感觉很不错。&lt;/p&gt;
+&lt;p&gt;折腾的心一下就上来了。&lt;/p&gt;
+&lt;p&gt;折腾的目标就是把图床上传图片的部分扒下来，卜卜口已经做过一个选择文件上传的版本了。&lt;/p&gt;
+&lt;p&gt;然而这满足不了我。&lt;/p&gt;
+&lt;p&gt;突然想起之前妹blog写文章的时候可以通过拖拽的方式上传图片到图床。&lt;/p&gt;
+&lt;p&gt;那么既然目标已经确定了，就得开始折腾了。&lt;/p&gt;
+&lt;p&gt;首先我到妹blog的github仓库把源码都扒下来，不得不说文件还挺复杂的，折腾了我半小时才完全扒下来。&lt;/p&gt;
+&lt;p&gt;由于我是极简主义者，看到一堆没必要的东西：编辑文章、发布文章、文章标题……&lt;/p&gt;
+&lt;p&gt;既然对我来说没有用那就删掉吧！&lt;/p&gt;
+&lt;p&gt;于是我生命中的一小时就这样被图床拿走了QAQ。&lt;/p&gt;
+&lt;p&gt;终于把代码都精简到差不多，就该做做最后的工作了！&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;装逼&lt;/del&gt; 分享。&lt;/p&gt;
+&lt;p&gt;既然有好东西就要和大家一起分享嘛！&lt;/p&gt;
+&lt;p&gt;然后就直接丢github pages了=w=。&lt;/p&gt;
+&lt;p&gt;由于我 &lt;del&gt;偷懒&lt;/del&gt; 是极简主义者，CSS就没弄了，所以会感觉怪怪的。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://caisiduo.xyz/D-img&quot;&gt;在线使用&lt;/a&gt;  &lt;a href=&quot;https://github.com/caisiduo/D-img&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用说明书：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开index.html。&lt;/li&gt;
+&lt;li&gt;将需要的音频或图片拖拽到文本框。&lt;/li&gt;
+&lt;li&gt;稍待片刻。&lt;/li&gt;
+&lt;li&gt;上传完成，出现的链接就是你上传的音频或图片。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;说明：简到不能再简的图床工具。只有 &lt;strong&gt;1&lt;/strong&gt; 个文件，代码压缩到 &lt;strong&gt;1&lt;/strong&gt; 行，大小 &lt;strong&gt;1&lt;/strong&gt; kb。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天逛博客的时候发
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>MarkDown快速入门</title>
@@ -572,7 +620,7 @@
     
     <content type="html">&lt;p&gt;&lt;strong&gt;前奏：&lt;/strong&gt;静态博客不支持动态博客 &lt;code&gt;.htaccess&lt;/code&gt; 的https跳转，怎么办呢？ &lt;del&gt;快用葵花牌小&lt;/del&gt; 经过我 &lt;del&gt;努力钻研&lt;/del&gt; &lt;strong&gt;百度一下&lt;/strong&gt;之后，发现了解决方法。&lt;strong&gt;( = w= )&lt;/strong&gt; &lt;del&gt;百度大法好&lt;/del&gt;&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;strong&gt;先看下代码：&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script type=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; targetProtocol = &lt;span class=&quot;string&quot;&gt;&quot;https:&quot;&lt;/span&gt;;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.location.protocol != targetProtocol) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.location.href = targetProtocol +  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.location.href.substring&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.location.protocol.length);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先看下代码：&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script type=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; targetProtocol = &lt;span class=&quot;string&quot;&gt;&quot;https:&quot;&lt;/span&gt;;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.location.protocol != targetProtocol) &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.location.href = targetProtocol +  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.location.href.substring&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.location.protocol.length);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;直接复制粘贴到网站就行了，用了这段代码，如果用户访问了如 &lt;code&gt;http://domain.com/……&lt;/code&gt; 会被重定向到 &lt;code&gt;https://domain.com/……&lt;/code&gt; 如果想反过来，即把 &lt;code&gt;https&lt;/code&gt; 强制重定向到 &lt;code&gt;http&lt;/code&gt;，把 &lt;code&gt;targetProtocol&lt;/code&gt; 的值改成 &lt;code&gt;http&lt;/code&gt; 就行。&lt;/p&gt;
 </content>
     
